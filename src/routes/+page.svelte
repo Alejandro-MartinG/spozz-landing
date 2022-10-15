@@ -1,23 +1,19 @@
 <script>
-  import Layout from "svelte-fluid-layout";
+  import Top from "../components/top.svelte"
+  import Mid from "../components/mid.svelte"
+  import Bot from "../components/bot.svelte"
+  import Footer from "../components/footer.svelte"
+  import Logo from "../components/logo.svelte"
+  import Grid from 'svelte-grid-responsive'
 </script>
 
-<Layout>
-  <header slot="header">My Header</header>
-  <main slot="main">My Main</main>
-  <footer slot="footer">Footer</footer>
-</Layout>
+<Grid container gutter={20}>
+  <Logo></Logo>
+  <Top></Top>
+  <Mid></Mid>
+  <Bot></Bot>
+  <Footer></Footer>
+</Grid>
 
 <style>
-  :global(.svelte-fluid-layout-large main) {
-    width: 100%;
-    height: 3141px;
-    background: rgb(38, 3, 82);
-  }
-
-  :global(.svelte-fluid-layout-small main) {
-    width: 100%;
-    height: 1201px;
-    background: rgb(38, 3, 82);
-  }
 </style>

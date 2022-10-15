@@ -24,6 +24,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"svelte-fluid-layout": "^0.2.0"
+		"svelte-fluid-layout": "^0.2.0",
+		"svelte-grid-responsive": "^1.2.4",
+		"sveltestrap": "^5.9.0"
 	}
 }
