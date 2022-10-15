@@ -5,64 +5,58 @@
     import other from '$lib/images/social-icons/other.png'
     import instagram from '$lib/images/social-icons/instagram.png'
     import fooIcon from '$lib/images/fooIcon.png'
-    import Grid from 'svelte-grid-responsive'
-    import { Button, Col, Row } from 'sveltestrap';
+    import { Row, Col, NavbarBrand } from 'sveltestrap';
 </script>
 
 
 <footer>
-    <Grid container gutter={20}>
-        <Grid>
-            <div class="brand_box_footer">
+    <Row cols={3}>
+        <Col xs="auto">
+            <NavbarBrand  href="/">
                 <img class="logo" src={fooIcon} alt="SvelteKit" />
                 <span class="brand_text"> | SPOZZ</span>
-            </div>
-        </Grid>
-    </Grid>
+            </NavbarBrand>
+        </Col>
 
-    <Grid container gutter={20}>
-        <Grid>
+        <Col xs="auto">
             <img class="line" src={line} alt="SvelteKit" />
-        </Grid>
-    </Grid>
+        </Col>
 
-    <Grid container gutter={20} columns={2}>
-        <Grid>
+        <Col  xs="auto">
             <span class="rights">© SPOZZ.club. All rights reserved. By NFT people, for NFT people.</span>
-        </Grid>
-
-        <Grid>
+        </Col>
+        <Col></Col>
+        <Col>
             <div class="social">
-                <img class="social_icons" src={discord} alt="SvelteKit" />
-                <img class="social_icons" src={twitter} alt="SvelteKit" />
-                <img class="social_icons" src={other} alt="SvelteKit" />
-                <img class="social_icons" src={instagram} alt="SvelteKit" />
+                <a href="https://discord.com/invite/6Yp2dcqHQ3">
+                    <img class="social_icons" src={discord} alt="SvelteKit" />
+                </a>
+
+                <a href="https://twitter.com/spozzclubnft">
+                    <img class="social_icons" src={twitter} alt="SvelteKit" />
+                </a>
+
+                <a href="https://info.spozz.club/">
+                    <img class="social_icons" src={other} alt="SvelteKit" />
+                </a>
+
+                <a href="https://www.instagram.com/spozz.club.nft/">
+                    <img class="social_icons" src={instagram} alt="SvelteKit" />
+                </a>
             </div>
-        </Grid>
-    </Grid>
+        </Col>
+    </Row>
+
+
+
 </footer>
 
 <style>
-    .column {
-        padding: 2rem;
-    }
-    .row_grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 1rem;
-        padding: 2rem;
-    }
-    .grid {
-        display: grid;
-        grid-template-rows:  1fr 1fr 1fr;
-        grid-gap: 1rem;
-    }
-
     footer {
         height: 164px;
         padding: 2rem;
-        padding-top: 4rem;
-        background: linear-gradient(180deg, #270E66 0%, #201C6F 100%);
+        padding-top: 3rem;
+       background: linear-gradient(180deg, #270E66 0%, #201C6F 100%);
         box-shadow: 0px -10px 57px rgba(0, 0, 0, 0.08);
     }
     .line {
@@ -70,12 +64,12 @@
         vertical-align: middle;
         height: 5px;
         max-width: 100%;
-        color: rgba(255, 255, 255, 1);
         padding-right: 2rem;
+        border: 1px solid #4D30CC;
+        transform: rotate(0.02deg);
     }
     .social {
         float: right;
-        padding-right: 3rem;
     }
     .social_icons {
         width: 23px;
@@ -90,7 +84,6 @@
         width: 19.85px;
         align-items: center;
         padding-top: 1px;
-        position: absolute;
         top: 50%;
         margin-top: -25px;
     }
@@ -99,16 +92,16 @@
         color: rgba(109, 131, 251, 1);
         font-weight: Medium;
         font-size: 14px;
-        padding-left: 1.75rem;
-        position: absolute;
         top: 50%;
         margin-top: -20px;
     }
     .rights {
-        width: 430px;
-        color: rgba(255, 255, 255, 1);
-        font-weight: SemiBold;
+        font-style: normal;
+        font-weight: 600;
         font-size: 10px;
-        padding-left: 1rem;
+        line-height: 132.1%;
+        /* or 13px */
+        letter-spacing: 0.15em;
+        color: #FFFFFF;
     }
 </style>

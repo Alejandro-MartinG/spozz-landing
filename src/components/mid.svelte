@@ -1,20 +1,26 @@
 <script>
     import mid from '$lib/images/mid.png'
+    import { CardText, Col, NavbarBrand } from 'sveltestrap';
+
+    import { fade } from 'svelte/transition';
+	let visible = true;
 </script>
 
-<div class="mid">
+<div class="mid" transition:fade>
     <img class="mid_background" src={mid} alt="SvelteKit" />
- 
+
+   {#if visible}
+   {/if}
     <nav class="nav">
         <ul/>
         <ul class="menu">
-            <li class="menu-item"><span class="v2_76 selected_text">BETA MARKETPLACE</span></li>
-            <li class="menu-item"><span class="v2_76 text">BETA MARKETPLACE</span></li>
-            <li class="menu-item"><span class="v2_77 text">SPOZZ TOKEN</span></li>
-            <li class="menu-item"><span class="v2_79 text">JOIN OUR DISCORD</span></li>
-            <li class="menu-item"><span class="v2_80 text">SPOZZ IN THE NEWS</span></li>
-            <li class="menu-item"><span class="v2_81 text">SPOZZ INFOPAGE</span></li>
-            <li class="menu-item"><span class="v2_78 text">BETA SPOZZ BLOG</span></li>
+            <li class="menu-item"><span class="v2_76">BETA MARKETPLACE</span></li>
+            <li class="menu-item"><span class="v2_76">BETA MARKETPLACE</span></li>
+            <li class="menu-item"><span class="v2_77">SPOZZ TOKEN</span></li>
+            <li class="menu-item"><span class="v2_79">JOIN OUR DISCORD</span></li>
+            <li class="menu-item"><span class="v2_80">SPOZZ IN THE NEWS</span></li>
+            <li class="menu-item"><span class="v2_81">SPOZZ INFOPAGE</span></li>
+            <li class="menu-item"><span class="v2_78">BETA SPOZZ BLOG</span></li>
         </ul>
     </nav>
 </div>
@@ -46,7 +52,7 @@
         border: 1px solid #FFFFFF;
         border-radius: 11px;
     }
-    .selected_text {
+    li:hover {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 600;
@@ -56,7 +62,7 @@
         letter-spacing: 0.05em;
         color: #FFFFFF;
     }
-    .text {
+    span {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 600;
@@ -64,7 +70,6 @@
         line-height: 27px;
         /* identical to box height */
         letter-spacing: 0.05em;
-        color: #FFFFFF;
         mix-blend-mode: overlay;
     }
     .mid_background {

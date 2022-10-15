@@ -14,4 +14,16 @@
     font-family: "Montserrat";
     font-weight: "SemiBold";
   }
+  :global(p) {
+    font-family: "Montserrat";
+    font-weight: "SemiBold";
+  }
+  :global(button) {
+    font-family: "Montserrat";
+    font-weight: "SemiBold";
+  }
+  :global(ul) {
+    list-style-type: none;
+  }
+
 </style>

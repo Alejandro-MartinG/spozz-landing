@@ -4,6 +4,7 @@
   import Bot from "../components/bot.svelte"
   import Footer from "../components/footer.svelte"
   import Logo from "../components/logo.svelte"
+  import Gallery from "../components/gallery.svelte"
   import Grid from 'svelte-grid-responsive'
 </script>
 
@@ -11,6 +12,7 @@
   <Logo></Logo>
   <Top></Top>
   <Mid></Mid>
+  <Gallery></Gallery>
   <Bot></Bot>
   <Footer></Footer>
 </Grid>
