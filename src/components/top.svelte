@@ -39,8 +39,12 @@
 
     <div class="grid-item menu-box">
         <ul class="menu">
-            <li class="menu-item"><span class="unselected-text">CHECK OUT THE PROJECT</span></li>
-            <li class="menu-item"><span class="selected-text">AND BECOME A MEMBER OF OUR GREAT COMMUNITY</span></li>
+            <li class="menu-item">
+                <span class="unselected-text">CHECK OUT THE PROJECT</span>
+            </li>
+            <li class="menu-item">
+                <span class="selected-text">AND BECOME A MEMBER OF OUR GREAT COMMUNITY</span>
+            </li>
         </ul>
         <div>
             <img class="top_selector" src={selector} alt="SvelteKit" />
@@ -112,8 +116,10 @@
         letter-spacing: 0.04rem;
         color: #BF23FF;
         mix-blend-mode: normal;
+        text-align: right;
     }
     .unselected-text {
+        text-align: right;
         width: 403px;
         font-style: normal;
         font-weight: 600;
@@ -122,6 +128,9 @@
         letter-spacing: 0.04em;
         color: #FFFFFF;
         mix-blend-mode: normal;
+    }
+    .menu-item {
+        float: right;
     }
     .v1_35 {
         width: 559px;
