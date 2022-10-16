@@ -1,58 +1,73 @@
 <script>
     import mid from '$lib/images/mid.png'
-    import { CardText, Col, NavbarBrand } from 'sveltestrap';
+    import Gallery from "./gallery.svelte"
+    import Screen from "./screen/marketplace.svelte"
 
     import { fade } from 'svelte/transition';
 	let visible = true;
 </script>
 
-<div class="mid" transition:fade>
+<div class="mid grid-container">
     <img class="mid_background" src={mid} alt="SvelteKit" />
+
+    <div class="grid-item">
+        <Screen></Screen>
+    </div>
 
    {#if visible}
    {/if}
-    <nav class="nav">
-        <ul/>
-        <ul class="menu">
-            <li class="menu-item"><span class="v2_76">BETA MARKETPLACE</span></li>
-            <li class="menu-item"><span class="v2_76">BETA MARKETPLACE</span></li>
-            <li class="menu-item"><span class="v2_77">SPOZZ TOKEN</span></li>
-            <li class="menu-item"><span class="v2_79">JOIN OUR DISCORD</span></li>
-            <li class="menu-item"><span class="v2_80">SPOZZ IN THE NEWS</span></li>
-            <li class="menu-item"><span class="v2_81">SPOZZ INFOPAGE</span></li>
-            <li class="menu-item"><span class="v2_78">BETA SPOZZ BLOG</span></li>
-        </ul>
-    </nav>
+
+    <div class="grid-item">
+        <nav class="nav">
+            <ul/>
+            <ul class="menu">
+                <li class="menu-item"><span>BETA MARKETPLACE</span></li>
+                <li class="menu-item"><span>BETA MARKETPLACE</span></li>
+                <li class="menu-item"><span>SPOZZ TOKEN</span></li>
+                <li class="menu-item"><span>JOIN OUR DISCORD</span></li>
+                <li class="menu-item"><span>SPOZZ IN THE NEWS</span></li>
+                <li class="menu-item"><span>SPOZZ INFOPAGE</span></li>
+                <li class="menu-item"><span>BETA SPOZZ BLOG</span></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="grid-item extend">
+        <Gallery></Gallery>
+    </div>
 </div>
 
 <style>
-    .mid {
+    .grid-container {
+        display: grid;
+        gap: 0.5rem;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 50% 50%;
+        padding: 1rem;
+    }
+    .grid-item {
+        position: relative;
         margin: auto;
-        display: flex;
-        width: 100%;
-        height: 1132px;
-        padding-top: 2rem;
+    }
+    .extend {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .mid {
+        height: 1490px;
+        padding-top: 4rem;
     }
     .nav {
         width: 100%;
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 0.5fr 1fr;
         grid-gap: 1rem;
     }
-    .menu_image {
-        ox-sizing: border-box;
+    li {
+        text-align: right;
 
-        position: absolute;
-        width: 517px;
-        height: 353px;
-        left: 306px;
-        top: 1053px;
-
-        mix-blend-mode: overlay;
-        border: 1px solid #FFFFFF;
-        border-radius: 11px;
     }
-    li:hover {
+    span:hover {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 600;
@@ -73,21 +88,10 @@
         mix-blend-mode: overlay;
     }
     .mid_background {
-        height: 795px;
+        height: 835px;
         position: absolute;
         mix-blend-mode: overlay;
         opacity: 0.95;
-    }
-    .v2_76 {
-    }
-    .v2_77 {
-    }
-    .v2_78 {
-    }
-    .v2_79 {
-    }
-    .v2_80 {
-    }
-    .v2_81 {
+        z-index: -1;
     }
 </style>

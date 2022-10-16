@@ -1,9 +1,9 @@
 <script>
     import line from '$lib/images/line.png'
-    import discord from '$lib/images/social-icons/discord.png'
-    import twitter from '$lib/images/social-icons/twitter.png'
-    import other from '$lib/images/social-icons/other.png'
-    import instagram from '$lib/images/social-icons/instagram.png'
+    import discord from '$lib/images/social-icons/footer/discord.png'
+    import twitter from '$lib/images/social-icons/footer/twitter.png'
+    import medium from '$lib/images/social-icons/footer/medium.png'
+    import instagram from '$lib/images/social-icons/footer/instagram.png'
     import fooIcon from '$lib/images/fooIcon.png'
     import { Row, Col, NavbarBrand } from 'sveltestrap';
 </script>
@@ -37,7 +37,7 @@
                 </a>
 
                 <a href="https://info.spozz.club/">
-                    <img class="social_icons" src={other} alt="SvelteKit" />
+                    <img class="social_icons" src={medium} alt="SvelteKit" />
                 </a>
 
                 <a href="https://www.instagram.com/spozz.club.nft/">
@@ -56,7 +56,7 @@
         height: 164px;
         padding: 2rem;
         padding-top: 3rem;
-       background: linear-gradient(180deg, #270E66 0%, #201C6F 100%);
+        background: linear-gradient(180deg, #270E66 0%, #201C6F 100%);
         box-shadow: 0px -10px 57px rgba(0, 0, 0, 0.08);
     }
     .line {
@@ -72,8 +72,8 @@
         float: right;
     }
     .social_icons {
-        width: 23px;
-        height: 17px;
+        max-width: 23px;
+        max-height: 17px;
     }
     .brand_box_footer {
         width: 101px;

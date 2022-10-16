@@ -26,7 +26,6 @@
         position: absolute;
         top: 5px;
         left: 27px;
-        font-family: Montserrat;
         font-weight: Medium;
         font-size: 12px;
         opacity: 1;
