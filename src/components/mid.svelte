@@ -2,9 +2,12 @@
     import mid from '$lib/images/mid.png'
     import Gallery from "./gallery.svelte"
     import Screen from "./screen/marketplace.svelte"
+    import borderLeft from '$lib/images/gallery/vector_boder_leftup.png'
+    import borderRight from '$lib/images/gallery/vector_boder_right.png'
+    import borderBottom from '$lib/images/gallery/vector_boder_right_down.png'
 
-    import { fade } from 'svelte/transition';
-	let visible = true;
+    import Carousel from "./screen/carousel.svelte"
+    import frameBig from "$lib/images/gallery/frame_b.png";
 </script>
 
 <div class="mid grid-container">
@@ -13,9 +16,6 @@
     <div class="grid-item">
         <Screen></Screen>
     </div>
-
-   {#if visible}
-   {/if}
 
     <div class="grid-item">
         <nav class="nav">
@@ -33,28 +33,62 @@
     </div>
 
     <div class="grid-item extend">
-        <Gallery></Gallery>
+        <img class="wrap" src={frameBig}  alt="SvelteKit"/>
+        <div class="row center">
+            <Gallery></Gallery>
+        </div>
     </div>
 </div>
 
 <style>
+    .row{
+        position:relative;
+    }
+    .wrap {
+        opacity: .15;
+        position: absolute;
+        size: auto;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: overlay;
+    }
     .grid-container {
         display: grid;
         gap: 0.5rem;
         grid-template-rows: 50% 50%;
         grid-template-columns: 50% 50%;
         padding: 1rem;
+        overflow:hidden;
+        align-self: center;
+    }
+    .center {
+        position: relative;
+        margin: auto;
+        align-self: center;
+        width: 80%;
     }
     .grid-item {
         position: relative;
         margin: auto;
+        align-self: center;
     }
     .extend {
         grid-column-start: 1;
         grid-column-end: 3;
+        display: grid;
+        gap: 0.5rem;
+        z-index: 5;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+        align-self: center;
+        vertical-align: middle;
+        max-width: 100%;
     }
     .mid {
-        height: 1490px;
+        height: 1500px;
+        max-width: 100%;
         padding-top: 4rem;
     }
     .nav {

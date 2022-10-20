@@ -46,9 +46,9 @@
                 <span class="selected-text">AND BECOME A MEMBER OF OUR GREAT COMMUNITY</span>
             </li>
         </ul>
-        <div>
+        <!--   <div>
             <img class="top_selector" src={selector} alt="SvelteKit" />
-        </div>
+        </div> -->
     </div>
 
     <div class="grid-item menu-social">

@@ -1,38 +1,35 @@
 <script>
     import screen from '$lib/images/screen.png'
-    import vector from '$lib/images/screen/leftup.png'
-    import rectangle from '$lib/images/screen/rectangle.png'
+
+    // import frame from '$lib/images/BANCO_ASSETS/frame.png'
+
+	// $: bgImage = `background-image: url("${frame}");`;
+    // $: bgPos = `background-position: center;`;
+    // $: bgR = `background-repeat: no-repeat;`;
+    // $: bgSize = `background-size: contain;`;
 </script>
 
-<div class="grid-container">
-    <img class="vector leftup" src={vector} alt="SvelteKit" />
-
-    <div class="">
-        <img class="vector rectangle" src={rectangle} alt="SvelteKit" />
-
-        <div class="">
-            <img class="screen" src={screen} alt="SvelteKit" />
-        </div>
-    </div>
+<div class="container">
+    <img class="top" src={screen} alt="SvelteKit"/>
+ <!--   <img class="top" src={screen} alt="SvelteKit" style="{bgImage} {bgPos} {bgR} {bgSize}"/> -->
+ 
 </div>
 
 <style>
+    .container {
+        position: relative;
+        margin: auto;
+    }
+    .top {
+        z-index: 1;
+        max-height: 489px;
+    }
     img {
-        max-width: 100%;
-    }
-    .screen {
-    }
-    .rectangle {
-        max-width: 50%;
+        margin: auto;
         position: absolute;
-    }
-    .leftup {
-        max-width: 50%;
-        width: 209.5px;
-        height: 40.5px;
-    }
-    .vector {
-        mix-blend-mode: overlay;
-        border: 2px solid #FFFFFF;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 50%;
+        transform: translateX(-50%);
     }
 </style>

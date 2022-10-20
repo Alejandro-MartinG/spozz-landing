@@ -32,6 +32,7 @@
         grid-template-rows:  1fr 1fr;
         grid-template-columns:  1fr;
         grid-gap: 1rem;
+        padding-top: 5rem;
     }
     .bot_background {
         height: 661px;
