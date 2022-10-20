@@ -27,38 +27,14 @@
 
 <style>
     .grid-container {
-        display: grid;
-        gap: 0.2rem;
-        grid-template-columns: 25% 25% 25% 25%;
-        max-width: 100%;
-    }
-    .grid-item {
-        position: relative;
-        max-width: 100%;
-        align-self: center;
-        justify-self: center;
-    }
-    .right {
-        /*
-        justify-content: flex-end;
-        margin-left: auto;
-        margin-right: 0;
-        vertical-align: middle;
-        right: 50%;
-        transform: translateX(50%);
-        top: 50%;
-        transform: translateX(-50%);
-        */
-    }
-    .center {
-        /*
-        display: flex;
+        display: inline-flex;
         justify-content: center;
-        */
+        align-items: center;
     }
     div {
         max-width: 100%;
-        border-radius: 7px;
+        border-radius: 19px;
         opacity: 0.85;
+        align-self: center;
     }
 </style>

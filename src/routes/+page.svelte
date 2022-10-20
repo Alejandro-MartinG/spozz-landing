@@ -4,17 +4,13 @@
   import Bot from "../components/bot.svelte"
   import Footer from "../components/footer.svelte"
   import Logo from "../components/logo.svelte"
-  import Grid from 'svelte-grid-responsive'
 </script>
 
-<Grid container gutter={20}>
-  <Logo></Logo>
-  <Top></Top>
-  <Mid></Mid>
-  <div></div>
-  <Bot></Bot>
-  <Footer></Footer>
-</Grid>
+<Logo></Logo>
+<Top></Top>
+<Mid></Mid>
+<Bot></Bot>
+<Footer></Footer>
 
 <style>
 </style>

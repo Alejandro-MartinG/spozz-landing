@@ -14,12 +14,12 @@
 </script>
 
 <div class="grid-container">
-    <div class="grid-item photo hvr-float" on:mouseover={handleMouseOver} on:mouseout={handleMouseOut}>
+    <div class="grid-item card-item hvr-float" on:mouseover={handleMouseOver} on:mouseout={handleMouseOut}>
         <img src={egirl} alt="SvelteKit"/>
     </div>
 
    {#if hover}
-    <div class="grid-item future" transition:scale>
+    <div class="grid-item card-item future" transition:scale>
         <p>
             Become part of the community that operates
             and owns the SPOZZ NFT market and music
@@ -42,9 +42,8 @@
         border: 2px solid #FFFFFF;
     }
     .grid-container {
-        display: grid;
+        display: inline-flex;
         gap: 0.01rem;
-        grid-template-columns: 80% 90%;
     }
     .grid-item {
         position: relative;
@@ -54,13 +53,13 @@
         max-width: 100%;
         border-radius: 7px;
     }
-    div {
+    div > .card-item {
         max-width: 80%;
         border-radius: 7px;
         opacity: 0.85;
         display: inline-block;
     }
-    div:hover {
+    div:hover > .card-item {
         opacity: 1;
         max-width: 100%;
         border-radius: 7px;

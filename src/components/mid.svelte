@@ -41,8 +41,42 @@
 </div>
 
 <style>
-    .row{
-        position:relative;
+    .mid {
+        height: 1500px;
+        max-width: 100%;
+        padding-top: 4rem;
+    }
+    .grid-container {
+        display: grid;
+        gap: 0.5rem;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 50% 50%;
+        padding: 1rem;
+        overflow:hidden;
+        align-self: center;
+        max-width: 100%;
+    }
+
+    .mid_background {
+        height: 30%;
+        position: absolute;
+        mix-blend-mode: overlay;
+        opacity: 0.95;
+        z-index: -1;
+        size: auto;
+    }
+
+    .extend {
+        grid-column-start: 1;
+        grid-column-end: 6;
+        display: grid;
+        gap: 0.5rem;
+        z-index: 5;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+        align-self: center;
+        justify-content: center;
+        max-width: 100%;
     }
     .wrap {
         opacity: .15;
@@ -54,42 +88,31 @@
         height: 100%;
         mix-blend-mode: overlay;
     }
-    .grid-container {
-        display: grid;
-        gap: 0.5rem;
-        grid-template-rows: 50% 50%;
-        grid-template-columns: 50% 50%;
-        padding: 1rem;
-        overflow:hidden;
-        align-self: center;
+
+    .row{
+        position:relative;
+        margin: auto;
     }
     .center {
+        display: flex;
         position: relative;
         margin: auto;
         align-self: center;
-        width: 80%;
+        justify-content: center;
+        max-width: 80%;
+
+        /*
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        */
     }
+
     .grid-item {
         position: relative;
         margin: auto;
         align-self: center;
-    }
-    .extend {
-        grid-column-start: 1;
-        grid-column-end: 3;
-        display: grid;
-        gap: 0.5rem;
-        z-index: 5;
-        padding-top: 8rem;
-        padding-bottom: 8rem;
-        align-self: center;
-        vertical-align: middle;
-        max-width: 100%;
-    }
-    .mid {
-        height: 1500px;
-        max-width: 100%;
-        padding-top: 4rem;
+        justify-content: center;
     }
     .nav {
         width: 100%;
@@ -120,12 +143,5 @@
         /* identical to box height */
         letter-spacing: 0.05em;
         mix-blend-mode: overlay;
-    }
-    .mid_background {
-        height: 835px;
-        position: absolute;
-        mix-blend-mode: overlay;
-        opacity: 0.95;
-        z-index: -1;
     }
 </style>
