@@ -4,6 +4,7 @@
     import spozz_card_mobile from "$lib/images/gallery/3_s.png";
 
     let hover = false;
+    export let cardId = 'd';
 
   	function handleMouseOver(e) {
 		hover = true;
@@ -14,7 +15,7 @@
 </script>
 
 <div class="grid-container">
-    <div class="grid-item card-item hvr-float" on:mouseover={handleMouseOver} on:mouseout={handleMouseOut}>
+    <div class="grid-item card-item hvr-float" on:click={handleMouseOver} on:mouseout={handleMouseOut}>
         <img src={spozz_card} alt="SvelteKit"/>
     </div>
 
@@ -37,22 +38,16 @@
 
 <style>
     .future {
-        margin: auto;
         vertical-align: middle;
         border: 2px solid #FFFFFF;
-        overflow-x: hidden;
-        color: #260352;
-        opacity: 0;
-        z-index: 3;
+        max-width: 30%;
     }
     div:hover > .future {
         background-color: #260352;
         opacity: 1;
     }
     .grid-container {
-        display: grid;
-        grid-template-columns: 80% 90%;
-        max-width: 100%;
+        display: inline-flex;
     }
     .grid-item {
         position: relative;
@@ -63,13 +58,11 @@
         border-radius: 7px;
     }
     div > .card-item {
-        max-width: 80%;
         border-radius: 7px;
         opacity: 0.85;
         display: inline-block;
     }
     div:hover > .card-item {
-        max-width: 120%;
         border-radius: 7px;
         z-index:1;
     }
@@ -97,9 +90,11 @@
         transition-property: transform;
         -webkit-transition-timing-function: ease-out;
         transition-timing-function: ease-out;
+        max-width: 80%;
     }
     .hvr-float:hover, .hvr-float:focus, .hvr-float:active {
         -webkit-transform: translateY(-8px);
         transform: translateY(-8px);
+        max-width: 100%;
     }
 </style>

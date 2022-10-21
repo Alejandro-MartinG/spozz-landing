@@ -2,6 +2,7 @@
     import mid from '$lib/images/mid.png'
     import Gallery from "./gallery.svelte"
     import Screen from "./screen/marketplace.svelte"
+    import Background from './background.svelte'
     import borderLeft from '$lib/images/gallery/vector_boder_leftup.png'
     import borderRight from '$lib/images/gallery/vector_boder_right.png'
     import borderBottom from '$lib/images/gallery/vector_boder_right_down.png'
@@ -11,7 +12,7 @@
 </script>
 
 <div class="mid grid-container">
-    <img class="mid_background" src={mid} alt="SvelteKit" />
+    <Background value="d"></Background>
 
     <div class="grid-item">
         <Screen></Screen>
@@ -55,15 +56,6 @@
         overflow:hidden;
         align-self: center;
         max-width: 100%;
-    }
-
-    .mid_background {
-        height: 30%;
-        position: absolute;
-        mix-blend-mode: overlay;
-        opacity: 0.95;
-        z-index: -1;
-        size: auto;
     }
 
     .extend {

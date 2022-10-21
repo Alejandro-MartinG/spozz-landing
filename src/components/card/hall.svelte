@@ -13,8 +13,8 @@
 	}
 </script>
 
-<div class="grid-container">
-    <div class="grid-item card-item hvr-float" on:mouseover={handleMouseOver} on:mouseout={handleMouseOut}>
+<div class="grid-container hvr-float" on:click={handleMouseOver} on:clickOutside={handleMouseOut}>
+    <div class="grid-item card-item">
         <img src={hall} alt="SvelteKit"/>
     </div>
 
@@ -37,15 +37,12 @@
 
 <style>
     .future {
-        margin: auto;
         vertical-align: middle;
         border: 2px solid #FFFFFF;
-        opacity: 0;
+        max-width: 30%;
     }
     .grid-container {
-        display: grid;
-        gap: 0.01rem;
-        grid-template-columns: 80% 90%;
+        display: inline-flex;
     }
     .grid-item {
         position: relative;
@@ -56,14 +53,12 @@
         border-radius: 7px;
     }
     div > .card-item {
-        max-width: 80%;
         border-radius: 7px;
         opacity: 0.85;
         display: inline-block;
     }
     div:hover > .card-item {
         opacity: 1;
-        max-width: 100%;
         border-radius: 7px;
         z-index:1;
     }
@@ -95,9 +90,11 @@
         transition-property: transform;
         -webkit-transition-timing-function: ease-out;
         transition-timing-function: ease-out;
+        max-width: 80%;
     }
     .hvr-float:hover, .hvr-float:focus, .hvr-float:active {
         -webkit-transform: translateY(-8px);
         transform: translateY(-8px);
+        max-width: 100%;
     }
 </style>
