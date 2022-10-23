@@ -14,10 +14,6 @@
 </script>
 
 <div class="grid-container hvr-float" on:click={handleMouseOver} on:clickOutside={handleMouseOut}>
-    <div class="grid-item card-item">
-        <img src={hall} alt="SvelteKit"/>
-    </div>
-
    {#if hover}
     <div class="grid-item card-item future" transition:scale>
         <p>
@@ -33,6 +29,10 @@
         </p>
     </div>
    {/if}
+
+    <div class="grid-item card-item">
+        <img src={hall} alt="SvelteKit"/>
+    </div>
 </div>
 
 <style>
