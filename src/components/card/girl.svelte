@@ -1,12 +1,15 @@
 <script>
-  	import { crossfade, scale } from 'svelte/transition';
+    import { backgroundStore } from '../mid-background-store';
+  	import { scale } from 'svelte/transition';
     import egirl from '$lib/images/gallery/1_b.png'
     import egirlMobile from '$lib/images/gallery/1_s.png'
+
 
     let hover = false;
 
   	function handleMouseOver(e) {
 		hover = true;
+        backgroundStore.set('a');
 	}
 	function handleMouseOut(e) {
 		hover = false;

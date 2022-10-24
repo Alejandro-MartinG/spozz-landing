@@ -1,19 +1,20 @@
 <script>
-  	import { crossfade, scale } from 'svelte/transition';
+    import { backgroundStore } from '../mid-background-store';
+  	import { scale } from 'svelte/transition';
     import hall from "$lib/images/gallery/2_b.png";
-    import hallMobile from "$lib/images/gallery/2_s.png";
 
     let hover = false;
 
   	function handleMouseOver(e) {
 		hover = true;
+        backgroundStore.set('b');
 	}
 	function handleMouseOut(e) {
 		hover = false;
 	}
 </script>
 
-<div class="grid-container hvr-float" on:click={handleMouseOver} on:clickOutside={handleMouseOut}>
+<div class="grid-container hvr-float" on:click={handleMouseOver} on:mouseout={handleMouseOut}>
    {#if hover}
     <div class="grid-item card-item future" transition:scale>
         <p>

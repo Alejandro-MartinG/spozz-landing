@@ -1,6 +1,5 @@
 <script>
     import top from '$lib/images/top.png'
-    import selector from '$lib/images/screen/top-selector.png'
     import SocialMenu from './social-menu.svelte'
 </script>
 
@@ -46,9 +45,6 @@
                 <span class="selected-text">AND BECOME A MEMBER OF OUR GREAT COMMUNITY</span>
             </li>
         </ul>
-        <!--   <div>
-            <img class="top_selector" src={selector} alt="SvelteKit" />
-        </div> -->
     </div>
 
     <div class="grid-item menu-social">
@@ -65,12 +61,6 @@
         height: 795px;
         transform: matrix(1, 0, 0, 1, 0, 0);
         z-index: -1;
-    }
-    .top_selector {
-        height: 132.5px;
-
-        mix-blend-mode: overlay;
-        border: 2px solid #FFFFFF;
     }
     .grid-container {
         display: grid;
@@ -104,7 +94,7 @@
     }
     .menu-box {
         grid-column-start: 3;
-        grid-column-end: 5;
+        grid-column-end: 6;
         grid-row: 4;
     }
     .selected-text {
@@ -131,6 +121,7 @@
     }
     .menu-item {
         float: right;
+        cursor: pointer;
     }
     .v1_35 {
         width: 559px;

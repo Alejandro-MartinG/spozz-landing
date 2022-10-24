@@ -1,34 +1,76 @@
 <script>
-    import mid from '$lib/images/mid.png'
+    import { get } from 'svelte/store';
+    import { backgroundStore } from './mid-background-store';
     import Gallery from "./gallery.svelte"
     import Screen from "./screen/marketplace.svelte"
     import Background from './background.svelte'
-    import borderLeft from '$lib/images/gallery/vector_boder_leftup.png'
-    import borderRight from '$lib/images/gallery/vector_boder_right.png'
-    import borderBottom from '$lib/images/gallery/vector_boder_right_down.png'
-
-    import Carousel from "./screen/carousel.svelte"
     import frameBig from "$lib/images/gallery/frame_b.png";
+
+    console.log('kpasa aki loco:', get(backgroundStore))
+    // Screen context
+    let screen = 'a';
+    let bgScreen = {
+        bg1: 'a',
+        bg2: 'b',
+        bg3: 'c',
+        // TODO: add all cases
+    };
+
+  	function handleClick(screenId) {
+        screen = bgScreen[screenId]
+	}
 </script>
 
 <div class="mid grid-container">
-    <Background value="d"></Background>
-
-    <div class="grid-item">
-        <Screen></Screen>
+    <Background value={$backgroundStore}></Background>
+    
+    <div class="grid-item screen">
+        <Screen value={screen}></Screen>
     </div>
 
     <div class="grid-item">
         <nav class="nav">
-            <ul/>
             <ul class="menu">
-                <li class="menu-item"><span>BETA MARKETPLACE</span></li>
-                <li class="menu-item"><span>BETA MARKETPLACE</span></li>
-                <li class="menu-item"><span>SPOZZ TOKEN</span></li>
-                <li class="menu-item"><span>JOIN OUR DISCORD</span></li>
-                <li class="menu-item"><span>SPOZZ IN THE NEWS</span></li>
-                <li class="menu-item"><span>SPOZZ INFOPAGE</span></li>
-                <li class="menu-item"><span>BETA SPOZZ BLOG</span></li>
+                <li class="menu-item">
+                    <a href={null} on:click|preventDefault={()=>handleClick('bg1')}>
+                        <span>BETA MARKETPLACE</span>
+                    </a> 
+                </li>
+                <li class="menu-item">
+                    <a href={null} on:click|preventDefault={event =>handleClick('bg2')}>
+                        <span>BETA MARKETPLACE</span>
+                    </a> 
+                </li>
+                <li class="menu-item">
+                    <a href={undefined} on:click|preventDefault={event =>handleClick('bg3')}>
+                        <span>BETA MARKETPLACE</span>
+                    </a> 
+                </li>
+                <li class="menu-item">
+                    <a href={null} on:click|preventDefault={event =>handleClick(event)}>
+                        <span>SPOZZ TOKEN</span>
+                    </a> 
+                </li>
+                <li class="menu-item">
+                    <a href={null} on:click|preventDefault={event =>handleClick(event)}>
+                        <span>JOIN OUR DISCORD</span>
+                    </a> 
+                </li>
+                <li class="menu-item">
+                    <a href={null} on:click|preventDefault={event =>handleClick(event)}>
+                        <span>SPOZZ IN THE NEWS</span>
+                    </a> 
+                </li>
+                <li class="menu-item">
+                    <a href={null} on:click|preventDefault={event =>handleClick(event)}>
+                        <span>SPOZZ INFOPAGE</span>
+                    </a> 
+                </li>
+                <li class="menu-item">
+                    <a href={null} on:click|preventDefault={event =>handleClick(event)}>
+                        <span>BETA SPOZZ BLOG</span>
+                    </a> 
+                </li>
             </ul>
         </nav>
     </div>
@@ -56,6 +98,27 @@
         overflow:hidden;
         align-self: center;
         max-width: 100%;
+    }
+
+    .menu {
+        text-align: right;
+        grid-column-start: 2;
+        grid-column-end: 2;
+    }
+
+    .screen {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--color-link);
+        outline: none;
+    }
+    a:hover, a:focus {
+        color: var(--color-link-hover);
+        outline: none;
     }
 
     .extend {
@@ -103,18 +166,22 @@
     .grid-item {
         position: relative;
         margin: auto;
+    }
+
+    span {
+        background-color: transparent;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 27px;
+        letter-spacing: 0.05em;
+        mix-blend-mode: overlay;
+        text-align: right;
+        margin: auto;
         align-self: center;
         justify-content: center;
-    }
-    .nav {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 0.5fr 1fr;
-        grid-gap: 1rem;
-    }
-    li {
-        text-align: right;
-
+        color: #FFFFFF;
     }
     span:hover {
         font-family: 'Montserrat';
@@ -122,18 +189,14 @@
         font-weight: 600;
         font-size: 22px;
         line-height: 27px;
-        /* identical to box height */
         letter-spacing: 0.05em;
         color: #FFFFFF;
+        text-align: right;
+        margin: auto;
+        align-self: center;
+        justify-content: center;
     }
-    span {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 27px;
-        /* identical to box height */
-        letter-spacing: 0.05em;
-        mix-blend-mode: overlay;
+    .menu-item {
+        cursor: pointer;
     }
 </style>

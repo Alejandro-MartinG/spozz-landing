@@ -1,5 +1,8 @@
 <script>
     import screen from '$lib/images/screen.png'
+    // import screen from '$lib/images/screen.png'
+
+  	import { crossfade, scale } from 'svelte/transition';
 
     // import frame from '$lib/images/BANCO_ASSETS/frame.png'
 
@@ -7,13 +10,19 @@
     // $: bgPos = `background-position: center;`;
     // $: bgR = `background-repeat: no-repeat;`;
     // $: bgSize = `background-size: contain;`;
+    const backgrounds = {
+		a: screen,
+	};
+
+    export let value = 'a';
 </script>
 
-<div class="container">
-    <img class="top" src={screen} alt="SvelteKit"/>
+{#key value}
+<div class="container"  transition:crossfade>
+    <img class="top" src={backgrounds[value]} alt="SvelteKit"/>
  <!--   <img class="top" src={screen} alt="SvelteKit" style="{bgImage} {bgPos} {bgR} {bgSize}"/> -->
- 
 </div>
+{/key}
 
 <style>
     .container {
@@ -26,10 +35,5 @@
     }
     img {
         margin: auto;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 50%;
-        transform: translateX(-50%);
     }
 </style>

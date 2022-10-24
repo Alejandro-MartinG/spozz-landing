@@ -1,13 +1,13 @@
 <script>
-  	import { crossfade, scale } from 'svelte/transition';
+    import { backgroundStore } from '../mid-background-store';
+  	import { scale } from 'svelte/transition';
     import spozz_card from "$lib/images/gallery/3_b.png";
-    import spozz_card_mobile from "$lib/images/gallery/3_s.png";
 
     let hover = false;
-    export let cardId = 'd';
 
   	function handleMouseOver(e) {
 		hover = true;
+        backgroundStore.set('c');
 	}
 	function handleMouseOut(e) {
 		hover = false;

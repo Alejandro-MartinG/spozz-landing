@@ -4,7 +4,6 @@
     import Hall2Card from './card/hall2.svelte'
     import SpozzCard from './card/spozz.svelte'
 
-    let hover = true;
 </script>
 
 <div class="grid-container">

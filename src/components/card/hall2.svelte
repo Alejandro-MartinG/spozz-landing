@@ -1,5 +1,6 @@
 <script>
-  	import { crossfade, scale } from 'svelte/transition';
+    import { backgroundStore } from '../mid-background-store';
+  	import { scale } from 'svelte/transition';
     import hall2 from "$lib/images/gallery/4_b.png";
     import hall2_mobile from "$lib/images/gallery/4_s.png";
 
@@ -7,6 +8,7 @@
 
   	function handleMouseOver(e) {
 		hover = true;
+        backgroundStore.set('d');
 	}
 	function handleMouseOut(e) {
 		hover = false;
