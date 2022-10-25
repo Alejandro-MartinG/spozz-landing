@@ -147,9 +147,10 @@
         width: 139px;
         height: 37px;
         background: rgba(255, 255, 255, 1);
-        opacity: 0.5;
+        opacity: 0.55;
         border-radius: 7px;
         overflow: hidden;
+        border: none;
     }
     .v2_106 {
         width: 566px;

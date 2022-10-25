@@ -68,6 +68,7 @@
         background: #FFFFFF;
         mix-blend-mode: overlay;
         border-radius: 7px;
+        border: none;
     }
     .button_text {
         vertical-align: middle;
