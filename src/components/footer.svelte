@@ -50,10 +50,8 @@
     .line {
         margin: auto;
         vertical-align: middle;
-        height: 5px;
+        height: 1.7px;
         max-width: 100%;
-        padding-right: 2rem;
-        border: 1px solid #4D30CC;
         transform: rotate(0.02deg);
     }
 
