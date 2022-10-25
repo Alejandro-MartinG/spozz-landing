@@ -1,12 +1,10 @@
 <script>
-    import { get } from 'svelte/store';
     import { backgroundStore } from './mid-background-store';
     import Gallery from "./gallery.svelte"
     import Screen from "./screen/marketplace.svelte"
     import Background from './background.svelte'
     import frameBig from "$lib/images/gallery/frame_b.png";
 
-    console.log('kpasa aki loco:', get(backgroundStore))
     // Screen context
     let screen = 'a';
     let bgScreen = {

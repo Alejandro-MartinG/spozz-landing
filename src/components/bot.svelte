@@ -1,6 +1,13 @@
 <script>
     import src from '$lib/images/bot.png'
     import { Row } from 'sveltestrap';
+    import { goto } from '$app/navigation';
+
+    const formUrl = './form';
+
+    function navigateForm() {
+        goto(formUrl)
+    }
 </script>
 
 <div class="bot grid">
@@ -13,7 +20,7 @@
         </Row>
 
         <Row>
-            <button>
+            <button on:click={navigateForm}>
                 <span class="button_text">Join to SPOZZ.Club</span>
             </button>
         </Row>

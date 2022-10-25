@@ -3,7 +3,6 @@
 <style>
   :global(body) {
     position: relative;
-    height: 3141px;
     max-width: 100%;
     overflow-x: hidden;
     background: #260352;

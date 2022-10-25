@@ -1,6 +1,13 @@
 <script>
     import top from '$lib/images/top.png'
     import SocialMenu from './social-menu.svelte'
+    import { goto } from '$app/navigation';
+
+    const formUrl = './form';
+
+    function navigateForm() {
+        goto(formUrl)
+    }
 </script>
 
 <div class="top grid-container">
@@ -31,7 +38,7 @@
             <br>
         </span>
 
-        <button class="v1_37">
+        <button class="v1_37" on:click={navigateForm}>
             <span class="v1_36">Join to SPOZZ.Club</span>
         </button>
     </div>
