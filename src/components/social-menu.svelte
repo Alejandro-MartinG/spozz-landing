@@ -49,33 +49,49 @@
 <style>
     .grid-container {
         display: grid;
-        gap: 1.2rem 0.5rem;
+        gap: 0.02rem;
         grid-template-rows: 25% 25% 25% 25%;
         grid-template-columns: 50% 50%;
     }
-    .grid-item {
-        position: relative;
-        margin: auto;
-    }
-    .icons {
-        mix-blend-mode: overlay;
-        grid-column-start: 2;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 4;
-    }
-    .social_icons {
-        mix-blend-mode: overlay;
-    }
+
     .follow {
-        height: 9px;
+        max-width: 100%;
         font-style: normal;
         font-weight: 500;
-        font-size: 7px;
-        line-height: 9px;
-        /* identical to box height */
         letter-spacing: -0.05em;
         color: #FFFFFF;
+        mix-blend-mode: overlay;
+        overflow: visible;
+        white-space: nowrap;
+        grid-column: 1;
+        direction: rtl;
+        margin-right: 0.3rem;
+
+    }
+
+    .vertical {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 2;
+        margin: 0 auto;
+    }
+
+    .icons {
+        mix-blend-mode: overlay;
+        grid-column: 2;
+        grid-row: 2;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+    .icon {
+        padding-top: 2.2rem;
+    }
+
+    .social_icons {
+        display: flex;
+        flex-direction: column;
         mix-blend-mode: overlay;
     }
 </style>
