@@ -2,21 +2,18 @@
     import { backgroundStore } from '../mid-background-store';
   	import { scale } from 'svelte/transition';
     import hall2 from "$lib/images/gallery/4_b.png";
-    import hall2_mobile from "$lib/images/gallery/4_s.png";
 
     let hover = false;
 
   	function handleMouseOver(e) {
-		hover = true;
+		hover = !hover;
         backgroundStore.set('d');
-	}
-	function handleMouseOut(e) {
-		hover = false;
 	}
 </script>
 
 <div class="grid-container">
-    <div class="grid-item card-item hvr-float" on:click={handleMouseOver} on:mouseout={handleMouseOut}>
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <div class="grid-item card-item hvr-float" on:click={handleMouseOver}>
         <img src={hall2} alt="SvelteKit"/>
     </div>
 
@@ -40,7 +37,7 @@
 <style>
     .future {
         vertical-align: middle;
-        border: 2px solid #FFFFFF;
+        border: 2px solid #FFFFFF47;
         max-width: 30%;
     }
     .grid-container {
@@ -60,7 +57,6 @@
         display: inline-block;
     }
     div:hover > .card-item {
-        opacity: 1;
         border-radius: 7px;
         z-index:1;
     }

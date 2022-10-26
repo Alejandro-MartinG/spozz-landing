@@ -26,19 +26,9 @@
         <Screen value={screen}></Screen>
     </div>
 
-    <div class="grid-item">
+    <div class="grid-item menu">
         <nav class="nav">
             <ul class="menu">
-                <li class="menu-item">
-                    <a href={null} on:click|preventDefault={()=>handleClick('bg1')}>
-                        <span>BETA MARKETPLACE</span>
-                    </a> 
-                </li>
-                <li class="menu-item">
-                    <a href={null} on:click|preventDefault={event =>handleClick('bg2')}>
-                        <span>BETA MARKETPLACE</span>
-                    </a> 
-                </li>
                 <li class="menu-item">
                     <a href={undefined} on:click|preventDefault={event =>handleClick('bg3')}>
                         <span>BETA MARKETPLACE</span>
@@ -99,14 +89,14 @@
     }
 
     .menu {
+        grid-column: 2;
+        grid-row: 1;
         text-align: right;
-        grid-column-start: 2;
-        grid-column-end: 2;
     }
 
     .screen {
-        grid-column-start: 1;
-        grid-column-end: 1;
+        grid-column: 1;
+        grid-row: 1;
     }
 
     a {
@@ -120,8 +110,9 @@
     }
 
     .extend {
+        grid-row: 2;
         grid-column-start: 1;
-        grid-column-end: 6;
+        grid-column-end: 3;
         display: grid;
         gap: 0.5rem;
         z-index: 5;
@@ -174,12 +165,12 @@
         font-size: 22px;
         line-height: 27px;
         letter-spacing: 0.05em;
-        mix-blend-mode: overlay;
         text-align: right;
         margin: auto;
         align-self: center;
         justify-content: center;
-        color: #FFFFFF;
+        color: #BF23FF;
+        mix-blend-mode: color-dodge;
     }
     span:hover {
         font-family: 'Montserrat';
@@ -196,5 +187,6 @@
     }
     .menu-item {
         cursor: pointer;
+        padding: 0.5rem;
     }
 </style>

@@ -33,7 +33,6 @@
     div {
         max-width: 100%;
         border-radius: 19px;
-        opacity: 0.85;
         align-self: center;
     }
 </style>

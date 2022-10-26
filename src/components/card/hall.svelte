@@ -6,15 +6,12 @@
     let hover = false;
 
   	function handleMouseOver(e) {
-		hover = true;
+		hover = !hover;
         backgroundStore.set('b');
-	}
-	function handleMouseOut(e) {
-		hover = false;
 	}
 </script>
 
-<div class="grid-container hvr-float" on:click={handleMouseOver} on:mouseout={handleMouseOut}>
+<div class="grid-container hvr-float">
    {#if hover}
     <div class="grid-item card-item future" transition:scale>
         <p>
@@ -31,7 +28,8 @@
     </div>
    {/if}
 
-    <div class="grid-item card-item">
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <div class="grid-item card-item" on:click={handleMouseOver}>
         <img src={hall} alt="SvelteKit"/>
     </div>
 </div>
@@ -39,7 +37,7 @@
 <style>
     .future {
         vertical-align: middle;
-        border: 2px solid #FFFFFF;
+        border: 2px solid #FFFFFF47;
         max-width: 30%;
     }
     .grid-container {
@@ -55,16 +53,12 @@
     }
     div > .card-item {
         border-radius: 7px;
-        opacity: 0.85;
         display: inline-block;
     }
     div:hover > .card-item {
         opacity: 1;
         border-radius: 7px;
         z-index:1;
-    }
-    div:hover > .future{
-        opacity: 1;
     }
 
     p {

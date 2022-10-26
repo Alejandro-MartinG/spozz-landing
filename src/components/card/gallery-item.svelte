@@ -1,49 +1,43 @@
 <script>
     import { backgroundStore } from '../mid-background-store';
   	import { scale } from 'svelte/transition';
-    import egirl from '$lib/images/gallery/1_b.png'
+    export let cardImage;
 
-
-    export let hover = false;
+    let hover = false;
 
   	function handleMouseOver(e) {
-		hover = !hover;
-        backgroundStore.set('a');
+		hover = true;
+        backgroundStore.set('c');
+	}
+	function handleMouseOut(e) {
+		hover = false;
 	}
 </script>
 
 <div class="grid-container">
+    <div class="grid-item card-item hvr-float" on:click={handleMouseOver} on:mouseout={handleMouseOut}>
+        <img src={cardImage} alt="SvelteKit"/>
+    </div>
+
    {#if hover}
     <div class="grid-item card-item future" transition:scale>
-        <p>
-            Become part of the community that operates
-            and owns the SPOZZ NFT market and music
-            club and chage the way how art, music,
-            movies or photos are distributed, consumed
-            and monetized. SPOZZ tokens are a new
-            medium of exchange that rewards creators and
-            users for their contributions to the community.
-            100% of the net benefits of SPOZZ.club are paid
-            out to the token holders.
-        </p>
+        <slot></slot>
     </div>
-    {/if}
-
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <div class="grid-item card-item hvr-float" on:click={handleMouseOver}>
-        <img src={egirl} alt="SvelteKit"/>
-    </div>
+   {/if}
 </div>
 
 <style>
     .future {
         vertical-align: middle;
-        border: 2px solid #FFFFFF47;
+        border: 2px solid #FFFFFF;
         max-width: 30%;
+    }
+    div:hover > .future {
+        background-color: #260352;
+        opacity: 1;
     }
     .grid-container {
         display: inline-flex;
-        gap: 0.01rem;
     }
     .grid-item {
         position: relative;
@@ -55,13 +49,15 @@
     }
     div > .card-item {
         border-radius: 7px;
+        opacity: 0.85;
         display: inline-block;
     }
     div:hover > .card-item {
         border-radius: 7px;
         z-index:1;
     }
-    p {
+
+    slot {
         color: #FFFFFF;
         font-family: 'Montserrat';
         font-style: normal;
@@ -71,6 +67,7 @@
         text-align: justify;
         letter-spacing: -0.05em;
         padding: .6rem;
+        opacity: 1;
     }
     .hvr-float {
         display: inline-block;

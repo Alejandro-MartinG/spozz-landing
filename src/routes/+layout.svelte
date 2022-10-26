@@ -6,23 +6,11 @@
     max-width: 100%;
     overflow-x: hidden;
     background: #260352;
+    font-family: "Montserrat";
+    font-weight: "SemiBold";
   }
-
   :global(span) {
     color: rgba(255, 255, 255, 1);
-    font-family: "Montserrat";
-    font-weight: "SemiBold";
-  }
-  :global(p) {
-    font-family: "Montserrat";
-    font-weight: "SemiBold";
-  }
-  :global(button) {
-    font-family: "Montserrat";
-    font-weight: "SemiBold";
-  }
-  :global(ul) {
-    list-style-type: none;
   }
 
 </style>

@@ -18,10 +18,10 @@
         height: 30%;
         position: absolute;
         mix-blend-mode: overlay;
-        opacity: .50;
+        opacity: .32;
         z-index: -1;
-        size: auto;
         max-width: 100%;
         padding-top: 4rem;
+        bottom: 24%;
     }
 </style>
