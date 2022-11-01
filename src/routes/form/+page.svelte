@@ -1,6 +1,7 @@
 <script>
-    let radioSelector = '1';
+    let radioSelector = '';
     let radioSelector2 = '';
+
     let selected = 'Plain';
     let disabled = false;
 </script>
@@ -34,27 +35,27 @@
 
     <div class="card-radio-2">
         <label>
-            <input type="radio" {disabled} bind:group={radioSelector2} value="music">
+            <input type="radio" bind:group={radioSelector2} value="music" disabled>
             Music
         </label>
 
         <label>
-            <input type="radio" bind:group={radioSelector2} value="art">
+            <input type="radio" bind:group={radioSelector2} value="art" disabled>
             Digital Art, Collectibles
         </label>
 
         <label>
-            <input type="radio" bind:group={radioSelector2} value="film">
+            <input type="radio" bind:group={radioSelector2} value="film" disabled>
             Video Art, Film and Animations
         </label>
 
-        <label>
-            <input type="radio" bind:group={radioSelector2} value="photo">
+        <label disabled>
+            <input type="radio" bind:group={radioSelector2} value="photo" disabled>
             Photography
         </label>
     </div>
 
-    <a href={null} class="btn btn-primary">NEXT</a>
+    <a href={null} class="btn btn-primary disabled">NEXT</a>
   </div>
 </div>
 
@@ -110,6 +111,7 @@
         flex-direction: column;
     }
     .card-radio-2 {
+        opacity: .5;
         margin: .5rem .5rem .5rem 1.7rem;
         display: flex;
         flex-direction: column;
@@ -128,6 +130,10 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         border-radius: 5px;
+    }
+    .disabled {
+        pointer-events: none;
+        color: #ccc;
     }
     label {
         font-family: 'Montserrat';

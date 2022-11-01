@@ -3,7 +3,7 @@
     import Logo from "../../components/logo.svelte"
     import formBg from "$lib/images/form_bg.png";
 
-    const title = 'Join to SPOZZ.Club'
+    const title = 'Join the SPOZZ.Club'
 
     $: bgImage = `background-image: url("${formBg}");`;
     // $: width = `width: ${w}px;`;
