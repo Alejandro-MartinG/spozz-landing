@@ -1,43 +1,43 @@
 <script>
-    import screen from '$lib/images/screen.png'
-  	import { crossfade, scale } from 'svelte/transition';
-    import frame from '$lib/images/BANCO_ASSETS/frame.png'
+    import marketplace from '$lib/images/mid-menu/marketplace.png'
+    import blog from '$lib/images/mid-menu/blog.png'
+    import tokenizzer from '$lib/images/mid-menu/tokenizzer.png'
+    import discord from '$lib/images/mid-menu/discord.png'
+    import no from '$lib/images/mid-menu/no-disponible.png'
+    import frame from '$lib/images/mid-menu/frame.png';
 
-	// $: bgImage = `background-image: url("${frame}");`;
-    // $: bgPos = `background-position: center;`;
-    // $: bgR = `background-repeat: no-repeat;`;
-    // $: bgSize = `background-size: contain;`;
+  	import { blur } from 'svelte/transition';
+
+	$: borderImage = `border-image: url("${frame}") /* source */ 27 / /* slice */ 1.5rem 28px 28px
+    28px / /* width */ 18px 12px 18px 12px /* outset */ round; /* repeat */;`;
+
     const backgrounds = {
-		a: screen,
+		a: marketplace,
+        b: blog,
+        c: tokenizzer,
+        d: discord,
+        e: no,
+        f: no,
 	};
 
     export let value = 'a';
 </script>
 
 {#key value}
-<div class="container"  transition:crossfade>
-    <img class="top" src={backgrounds[value]} alt="SvelteKit"/>
-    <img class="frame" src={frame} alt="SvelteKit"/>
- <!--   <img class="top" src={screen} alt="SvelteKit" style="{bgImage} {bgPos} {bgR} {bgSize}"/> -->
+<div class="container"  style="{borderImage}">
+    <img class="top" src={backgrounds[value]} alt="SvelteKit"  in:blur="{{delay: 250, duration: 300}}"/>
 </div>
 {/key}
 
 <style>
     .container {
-        position: relative;
+        display: flex;
+        flex-direction: column;
         margin: auto;
+        border-style:ridge;
     }
     .top {
-        z-index: 1;
         max-height: 600px;
-    }
-    .frame {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 104%;
-        height: 104%;
-        mix-blend-mode: overlay;
     }
     img {
         margin: auto;

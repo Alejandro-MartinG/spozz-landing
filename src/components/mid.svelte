@@ -11,7 +11,9 @@
         bg1: 'a',
         bg2: 'b',
         bg3: 'c',
-        // TODO: add all cases
+        bg4: 'd',
+        bg5: 'e',
+        bg6: 'f'
     };
 
   	function handleClick(screenId) {
@@ -30,33 +32,33 @@
         <nav class="nav">
             <ul class="menu">
                 <li class="menu-item">
-                    <a href={undefined} on:click|preventDefault={event =>handleClick('bg3')}>
-                        <span>BETA MARKETPLACE</span>
+                    <a href={undefined} on:click|preventDefault={event =>handleClick('bg1')}>
+                        <span>SPOZZ MARKETPLACE (BETA)</span>
                     </a> 
                 </li>
                 <li class="menu-item">
-                    <a href={null} on:click|preventDefault={event =>handleClick(event)}>
-                        <span>SPOZZ TOKEN</span>
+                    <a href={null} on:click|preventDefault={event =>handleClick('bg2')}>
+                        <span>SPOZZ BLOG (BETA)</span>
                     </a> 
                 </li>
                 <li class="menu-item">
-                    <a href={null} on:click|preventDefault={event =>handleClick(event)}>
+                    <a href={null} on:click|preventDefault={event =>handleClick('bg3')}>
+                        <span>SPOZZ TOKENIZZER (BETA)</span>
+                    </a> 
+                </li>
+                <li class="menu-item">
+                    <a href={null} on:click|preventDefault={event =>handleClick('bg4')}>
                         <span>JOIN OUR DISCORD</span>
                     </a> 
                 </li>
                 <li class="menu-item">
-                    <a href={null} on:click|preventDefault={event =>handleClick(event)}>
-                        <span>SPOZZ IN THE NEWS</span>
+                    <a href={null} on:click|preventDefault={event =>handleClick('bg5')}>
+                        <span>SPOZZ TOKEN</span>
                     </a> 
                 </li>
                 <li class="menu-item">
-                    <a href={null} on:click|preventDefault={event =>handleClick(event)}>
-                        <span>SPOZZ INFOPAGE</span>
-                    </a> 
-                </li>
-                <li class="menu-item">
-                    <a href={null} on:click|preventDefault={event =>handleClick(event)}>
-                        <span>BETA SPOZZ BLOG</span>
+                    <a href={null} on:click|preventDefault={event =>handleClick('bg6')}>
+                        <span>PROJECT INFORMATION</span>
                     </a> 
                 </li>
             </ul>
