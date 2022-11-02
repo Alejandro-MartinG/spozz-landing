@@ -1,5 +1,6 @@
 <script>
     import top from '$lib/images/top.png'
+    import windows from '$lib/images/windows.png'
     import SocialMenu from './social-menu.svelte'
     import { goto } from '$app/navigation';
 
@@ -8,6 +9,8 @@
     function navigateForm() {
         goto(formUrl)
     }
+
+	$: backgroundImage = `background-image: url("${windows}");`;
 </script>
 
 <div class="top grid-container">
@@ -43,26 +46,16 @@
         </button>
     </div>
 
-    <div class="grid-item menu-box">
-        <ul class="menu">
-            <li class="menu-item">
-                <span class="unselected-text">CHECK OUT THE PROJECT</span>
-            </li>
-            <li class="menu-item">
-                <span class="selected-text">AND BECOME A MEMBER OF OUR GREAT COMMUNITY</span>
-            </li>
-        </ul>
-    </div>
-
     <div class="grid-item menu-social">
         <SocialMenu></SocialMenu>
     </div>
+
 </div>
 
 <style>
     .top {
         width: 100%;
-        height: 895px;
+        height: 605px;
     }
     .top_background {
         height: 795px;
@@ -72,7 +65,7 @@
     .grid-container {
         display: grid;
         gap: 0.5rem;
-        grid-template-rows: 25% 25% 40% 10%;
+        grid-template-rows: 25% 25% 40%;
         grid-template-columns: 15% 15% 15% 20% 20% 15%;
     }
     .grid-item {
@@ -98,37 +91,6 @@
         font-size: 24px;
         text-align: left;
         mix-blend-mode: overlay;
-    }
-    .menu-box {
-        grid-column-start: 3;
-        grid-column-end: 6;
-        grid-row: 4;
-    }
-    .selected-text {
-        width: 841px;
-        font-style: normal;
-        font-size: 28px;
-        font-weight: 600;
-        line-height: 34px;
-        letter-spacing: 0.04rem;
-        color: #BF23FF;
-        mix-blend-mode: normal;
-        text-align: right;
-    }
-    .unselected-text {
-        text-align: right;
-        width: 403px;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 28px;
-        line-height: 34px;
-        letter-spacing: 0.04em;
-        color: #FFFFFF;
-        mix-blend-mode: normal;
-    }
-    .menu-item {
-        float: right;
-        cursor: pointer;
     }
     .v1_35 {
         width: 559px;
@@ -158,5 +120,4 @@
         font-size: 14px;
         text-align: left;
     }
-
 </style>
