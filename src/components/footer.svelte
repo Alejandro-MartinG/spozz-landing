@@ -61,6 +61,7 @@
     .social_icons {
         max-width: 23px;
         max-height: 17px;
+        margin:0.25rem;
     }
 
     .logo {
