@@ -18,7 +18,7 @@
     </div>
 
    {#if hover}
-    <div class="grid-item card-item future" transition:scale>
+    <div class="grid-item future" transition:scale>
         <p>
             Become part of the community that operates
             and owns the SPOZZ NFT market and music
@@ -38,10 +38,14 @@
     .future {
         vertical-align: middle;
         border: 2px solid #FFFFFF47;
-        max-width: 30%;
+        max-width: 46%;
     }
     .grid-container {
         display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.01rem;
+        max-width: 100%;
     }
     .grid-item {
         position: relative;
@@ -50,27 +54,23 @@
     img {
         max-width: 100%;
         border-radius: 7px;
+        box-shadow: var(--shadow-elevation-high);
     }
     div > .card-item {
         border-radius: 7px;
         opacity: 0.85;
         display: inline-block;
     }
-    div:hover > .card-item {
-        border-radius: 7px;
-        z-index:1;
-    }
     p {
         color: #FFFFFF;
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 15px;
         text-align: justify;
         letter-spacing: -0.05em;
         padding: .6rem;
-        opacity: 1;
     }
     .hvr-float {
         display: inline-block;

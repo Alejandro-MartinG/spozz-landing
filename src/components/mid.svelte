@@ -115,7 +115,6 @@
         grid-row: 2;
         grid-column-start: 1;
         grid-column-end: 3;
-        display: grid;
         gap: 0.5rem;
         z-index: 5;
         padding-top: 8rem;
@@ -141,7 +140,6 @@
     }
     .center {
         display: flex;
-        position: relative;
         margin: auto;
         align-self: center;
         justify-content: center;

@@ -29,10 +29,14 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
+        max-width: 90%;
+    }
+    .grid-item {
+        max-width: 100%;
+        margin: 1rem;
     }
     div {
         max-width: 100%;
-        border-radius: 19px;
         align-self: center;
     }
 </style>
