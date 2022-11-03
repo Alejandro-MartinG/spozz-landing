@@ -41,6 +41,7 @@
         grid-row-end: 2;
         align-items: flex-end;
         background-blend-mode:hard-light;
+        background-repeat: round;
     }
     .text {
         text-align: right;
