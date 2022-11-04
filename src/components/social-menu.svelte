@@ -17,25 +17,25 @@
     </div>
 
     <div class="grid-item icons">
-        <div class="grid-item icon">
+        <div class="icon discord">
             <a href="https://discord.com/invite/6Yp2dcqHQ3">
                 <img class="social_icons" src={discord} alt="SvelteKit" />
             </a>
         </div>
 
-        <div class="grid-item icon">
+        <div class="icon twitter">
             <a href="https://twitter.com/spozzclubnft">
                 <img class="social_icons" src={twitter} alt="SvelteKit" />
             </a>
         </div>
 
-        <div class="grid-item icon">
+        <div class="icon medium">
             <a href="https://info.spozz.club/">
                 <img class="social_icons" src={medium} alt="SvelteKit" />
             </a>
         </div>
 
-        <div class="grid-item icon">
+        <div class="grid-item icon instagram">
             <a href="https://www.instagram.com/spozz.club.nft/">
                 <img class="social_icons" src={instagram} alt="SvelteKit" />
             </a>
@@ -50,7 +50,7 @@
     .grid-container {
         display: grid;
         gap: 0.02rem;
-        grid-template-rows: 25% 25% 25% 25%;
+        grid-template-rows: 10% 30% 20% 20% 20%;
         grid-template-columns: 50% 50%;
     }
 
@@ -64,29 +64,30 @@
         overflow: visible;
         white-space: nowrap;
         grid-column: 1;
+        grid-row: 1;
         direction: rtl;
         margin-right: 0.3rem;
-
     }
 
     .vertical {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row: 2;
+        grid-column: 1;
+        grid-row-start: 2;
+        grid-row-end: 5;
         margin: 0 auto;
     }
 
     .icons {
         mix-blend-mode: overlay;
         grid-column: 2;
-        grid-row: 2;
+        grid-row-start: 2;
+        grid-row-end: 6;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: end;
     }
     .icon {
-        padding-top: 2.2rem;
+        padding-top: 2rem;
     }
 
     .social_icons {
@@ -94,4 +95,5 @@
         flex-direction: column;
         mix-blend-mode: overlay;
     }
+
 </style>
