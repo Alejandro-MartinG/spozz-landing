@@ -2,8 +2,8 @@
     import Footer from "../../components/footer.svelte"
     import Logo from "../../components/logo.svelte"
     import formBg from "$lib/images/form_bg.png";
-
-    const title = 'Join the SPOZZ.Club'
+    import title2 from "$lib/images/join-spozz-linear.png";
+    import title1 from "$lib/images/join-spozz.png";
 
     $: bgImage = `background-image: url("${formBg}");`;
     // $: width = `width: ${w}px;`;
@@ -16,9 +16,10 @@
     <Logo></Logo>
 
     <div class="hb">
-        <span class="title3">{title}</span>
-        <span class="title2">{title}</span>
-        <span class="title1">{title}</span>
+        <img class="title" src={title2}  alt="SvelteKit"/>
+        <img class="title" src={title2}  alt="SvelteKit"/>
+        <img class="title" src={title2}  alt="SvelteKit"/>
+        <img class="title" src={title1}  alt="SvelteKit"/>
     </div>
 
     <div class="hbo">
@@ -44,22 +45,7 @@
         margin: 6rem 12rem 6rem 6rem;
         align-self: end;
     }
-    span {
-        height: 98px;
-        font-family: "Montserrat";
-        font-weight: "bold";
-        font-style: 880;
-        font-size: 96px;
-        line-height: 117px;
+    .title {
         mix-blend-mode: overlay;
-    }
-    .title1 {
-        opacity: 0.3;
-    }
-    .title2 {
-        opacity: 0.6;
-    }
-    .title3 {
-        opacity: 0.8;
     }
 </style>

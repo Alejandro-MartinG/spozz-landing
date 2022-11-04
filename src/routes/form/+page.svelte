@@ -76,11 +76,12 @@
     .card-body {
         display: grid;
         gap: 0.5rem;
-        grid-template-rows: 10% 70% 20%;
+        grid-template-rows: 20% 60% 20%;
         grid-template-columns: 50% 50%;
         padding: 1rem;
     }
     .column-title {
+        height: 50px;
         padding: 0.4rem 0.8rem 0.4rem 1rem;
         grid-column: 2;
         font-size: 13px;
