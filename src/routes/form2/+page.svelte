@@ -9,10 +9,11 @@
 <img class="title" src={headTitle}  alt="SvelteKit"/>
 
 <div class="top">
-    <span style="font-weight: bold;">Musicians: Earn more and get paid directly and instantly<br> for your songs!<br></span>
 </div>
 
 <div class="">
+    <span style="font-weight: bold;">Musicians: Earn more and get paid directly and instantly<br> for your songs!<br></span>
+
     <span>
         On SPOZZ.club you can sell your songs as an NFT to an unlimited<br>
         number of fans, traders and investors. You receive funds immediately<br>
@@ -69,9 +70,7 @@
         <label>Comments<br>
             <input class="comment" type="text" placeholder="/ enter information"/>
         </label>
-    </form>
 
-    <div>
         <div class="bottom-text">
             <span>Thank you for your interest in SPOZZ.club.<br></span>
             <span style="font-weight: bold;">We will contact you shortly!<br></span>
@@ -79,16 +78,18 @@
 
         <div class="card-radio">
             <span class="blue-text">Do you want to receive news by e-mail and subscribe to our newsletter?<br></span>
+
             <label>
-                <input type="radio" bind:group={radioSelector} value="yes">
-                Yes 
-                <input type="radio" bind:group={radioSelector} value="no">
-                No 
+                <input type="radio" bind:group={radioSelector} value="yes">Yes 
+            </label>
+
+            <label>
+                <input type="radio" bind:group={radioSelector} value="no">No 
             </label>
         </div>
 
         <a href={null} class="btn btn-primary">SUBMIT</a>
-    </div>
+    </form>
   </div>
 </div>
 
@@ -100,7 +101,6 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        text-fill-color: transparent;
     }
     .top {
         margin-top: 2rem;
@@ -135,7 +135,7 @@
     }
 
     .card-radio {
-        margin: .5rem .5rem .5rem 2rem;
+        margin: auto;
         display: flex;
         flex-direction: column;
     }
@@ -164,7 +164,7 @@
         text-align: left;
         color: #686868;
     }
-    input {
+    .content > label > input {
         accent-color: rgb(93, 53, 252);
         max-width: 580px;
         width: 100%;
