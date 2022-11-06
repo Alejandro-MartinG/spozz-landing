@@ -1,9 +1,27 @@
 <script>
+    import { goto } from '$app/navigation';
+
     let radioSelector = '';
     let radioSelector2 = '';
+    let disabled = true;
 
-    let selected = 'Plain';
-    let disabled = false;
+
+    $: disableRadio2 = radioSelector !== '1';
+    $: if(radioSelector !== '1') { radioSelector2 = '' }
+    $: if(radioSelector === '1' && radioSelector2 !== '') { disabled = false }
+    $: if(radioSelector !== '1' && radioSelector !== '') { disabled = false }
+    $: if(radioSelector === '1' && radioSelector2 === '') { disabled = true }
+
+    const formUrl2 = './form2';
+    const formUrl3 = './form3';
+    const routes = {
+        '1': formUrl2,
+        '2': formUrl3,
+        '3': formUrl3,
+        '4': formUrl3 
+    }
+
+    const navigateForm = () => goto(routes[radioSelector]);
 </script>
 
 <div class="cardo">
@@ -35,27 +53,27 @@
 
     <div class="card-radio-2">
         <label>
-            <input type="radio" bind:group={radioSelector2} value="music" disabled>
+            <input type="radio" bind:group={radioSelector2} value="music" disabled={disableRadio2}>
             Music
         </label>
 
         <label>
-            <input type="radio" bind:group={radioSelector2} value="art" disabled>
+            <input type="radio" bind:group={radioSelector2} value="art" disabled={disableRadio2}>
             Digital Art, Collectibles
         </label>
 
         <label>
-            <input type="radio" bind:group={radioSelector2} value="film" disabled>
+            <input type="radio" bind:group={radioSelector2} value="film" disabled={disableRadio2}>
             Video Art, Film and Animations
         </label>
 
-        <label disabled>
-            <input type="radio" bind:group={radioSelector2} value="photo" disabled>
+        <label>
+            <input type="radio" bind:group={radioSelector2} value="photo" disabled={disableRadio2}>
             Photography
         </label>
     </div>
 
-    <a href={null} class="btn btn-primary disabled">NEXT</a>
+    <button href={null} class="btn btn-primary" disabled={disabled} on:click={navigateForm}>NEXT</button>
   </div>
 </div>
 
@@ -112,7 +130,6 @@
         flex-direction: column;
     }
     .card-radio-2 {
-        opacity: .5;
         margin: .5rem .5rem .5rem 1.7rem;
         display: flex;
         flex-direction: column;
@@ -131,10 +148,6 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         border-radius: 5px;
-    }
-    .disabled {
-        pointer-events: none;
-        color: #ccc;
     }
     label {
         font-family: 'Montserrat';
