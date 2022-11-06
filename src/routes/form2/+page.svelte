@@ -4,6 +4,11 @@
     let radioSelector = 'yes';
     let selected = 'Plain';
     let disabled = false;
+
+    function sendEmail(e) {
+        const formData = new FormData(e.target)
+        console.log(formData)
+    }
 </script>
 
 <img class="title" src={headTitle}  alt="SvelteKit"/>
@@ -12,17 +17,21 @@
 </div>
 
 <div class="">
-    <span style="font-weight: bold;">Musicians: Earn more and get paid directly and instantly<br> for your songs!<br></span>
+    <span style="font-weight: bold;">Musicians: Earn more and get paid directly and instantly<br> for your songs!<br><br></span>
 
     <span>
-        On SPOZZ.club you can sell your songs as an NFT to an unlimited<br>
-        number of fans, traders and investors. You receive funds immediately<br>
-        and collect royalties from secondary sales of the NFT (trading).<br><br>
+        On SPOZZ.club you can <span style="font-weight: bold;">sell your songs as NFTs</span> to fans, traders,<br>
+        and investors.
+        For every secondary sale you will <span style="font-weight: bold;">collect trading<br> royalties.</span><br><br>
 
-        You can opt in to collect royalties from the distribution of your music<br>
-        to all major digital streaming and broadcast platforms through<br>
-        SPOZZ.club and cash-in on those future revenues immediately: fully<br>
-        or partially, you choose!<br><br>
+        You can <span style="font-weight: bold;">distribute your music to all major streaming platforms.</span><br><br>
+
+        <span style="font-weight: bold;">Sell song royalties as NFTs and cash-in immediately:</span> fully or<br> partially,
+        you choose!<br><br>
+
+        Your artist website on SPOZZ will allow you to interact directly<br> with your fans:
+        The perfect landing page to <span style="font-weight: bold;">monetize your<br>
+        creations, services, concert tickets and merchandise.</span><br><br>
     </span>
 </div>
 
@@ -30,21 +39,21 @@
   <div class="card-header">Pre-register now to be among the first on the SPOZZ.club platform on launch day.</div>
 
   <div class="card-body">
-    <form class="content">
+    <form class="content" on:submit|preventDefault={sendEmail}>
         <label>Artist / Band Name<br>
-            <input type="text" placeholder="/ enter information"/>
+            <input type="text" placeholder="/ enter information" required/>
         </label>
         <label>Contact Person First Name<br>
-            <input type="text" placeholder="/ enter information"/>
+            <input type="text" placeholder="/ enter information" required/>
         </label>
         <label>Contact Person Last Name<br>
-            <input type="text" placeholder="/ enter information"/>
+            <input type="text" placeholder="/ enter information" required/>
         </label>
         <label>Role<br>
-            <input type="text" placeholder="/ enter your role"/>
+            <input type="text" placeholder="/ enter your role" required/>
         </label>
         <label>E-Mail<br>
-            <input name="email" type="email" autocomplete placeholder="/ enter your email" value=''/>
+            <input name="email" type="email" autocomplete placeholder="/ enter your email" required value=''/>
         </label>
         <label>Phone<br>
             <input type="tel" placeholder="/ enter information"/>
@@ -88,7 +97,7 @@
             </label>
         </div>
 
-        <a href={null} class="btn btn-primary">SUBMIT</a>
+        <button type="submit" class="btn btn-primary">SUBMIT</button>
     </form>
   </div>
 </div>
@@ -184,5 +193,8 @@
     }
     .bottom-text {
         margin: 2rem;
+    }
+    input {
+        outline: none;
     }
 </style>
