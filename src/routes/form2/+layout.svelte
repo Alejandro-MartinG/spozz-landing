@@ -31,7 +31,7 @@
                 Check out our awesome community and become a member today!<br>
             </span>
             <div class="btns">
-                <a href={null} class="btn1 btn btn-primary">JOIN OUR DISCORD</a>
+                <a href='https://discord.gg/6Yp2dcqHQ3' class="btn1 btn btn-primary">JOIN OUR DISCORD</a>
                 <a href={null} class="btn1 btn btn-primary">GET A SPOZZ MEMBERSHIP AVATAR</a>
             </div>
         </div>
