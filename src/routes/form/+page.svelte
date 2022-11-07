@@ -14,11 +14,13 @@
 
     const formUrl2 = './form2';
     const formUrl3 = './form3';
+    const formUrl32 = './form3-2';
+    const formUrl33 = './form3-3';
     const routes = {
         '1': formUrl2,
         '2': formUrl3,
-        '3': formUrl3,
-        '4': formUrl3 
+        '3': formUrl32,
+        '4': formUrl33 
     }
 
     const navigateForm = () => goto(routes[radioSelector]);

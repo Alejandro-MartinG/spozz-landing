@@ -1,21 +1,23 @@
 <script>
-    import title from "$lib/images/art-title.png";
+    import title from "$lib/images/invest-title.png";
 </script>
 
 <img class="title" src={title}  alt="SvelteKit"/>
 
 <div class="cardo">
-  <div class="card-header">Music fans : Own a song of your preferred artist:</div>
+  <div class="card-header">invest</div>
   <div class="card-body">
-    You can now buy a song, listen to it, collect it and earn royalties from its reproduction in streaming and broadcast media. You can sell it anytime or surprise a person you like with a gift!
+    Invest in valuable artwork of upcoming artists. 
+    Sense what's hot and trendy and buy early into new limited releases.
+    You may sell it later to the secondary market on SPOZZ.club or any other NFT marketplace.
   </div>
 </div>
 
 <div class="cardo">
-  <div class="card-header">Investors, collectors and traders:</div>
+  <div class="card-header">spozz token</div>
   <div class="card-body">
-    Buy your favorite artist’s newest creations of art on SPOZZ.club: 
-    Sense what’s hot and trendy, buy early into new limited releases and build a valuable collection of digital artworks.
+    Claim SPOZZ tokens in the Airdrop and stake them for participation in the benefits of the marketplace. 
+    Receive rewards for selling your NFTs on SPOZZ.club.
   </div>
 </div>
 
