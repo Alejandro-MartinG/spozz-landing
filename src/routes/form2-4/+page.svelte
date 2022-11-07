@@ -1,7 +1,5 @@
 <script>
-    import headTitle from "$lib/images/music-title.png";
-	import CountryDropdown from "../../components/country-dropdown.svelte";
-    import CountryDrop from "../../components/country-dropdown.svelte"
+    import headTitle from "$lib/images/photo-title.png";
 
     let radioSelector = 'yes';
     let selected = 'Plain';
@@ -24,21 +22,9 @@
 <img class="title" src={headTitle}  alt="SvelteKit"/>
 
 <div class="top">
-    <span style="font-weight: bold;">Musicians: Earn more and get paid directly and instantly<br> for your songs!<br><br></span>
+    <span style="font-weight: bold;"><br><br></span>
 
     <span>
-        On SPOZZ.club you can <span style="font-weight: bold;">sell your songs as NFTs</span> to fans, traders,<br>
-        and investors.
-        For every secondary sale you will <span style="font-weight: bold;">collect trading<br> royalties.</span><br><br>
-
-        You can <span style="font-weight: bold;">distribute your music to all major streaming platforms.</span><br><br>
-
-        <span style="font-weight: bold;">Sell song royalties as NFTs and cash-in immediately:</span> fully or<br> partially,
-        you choose!<br><br>
-
-        Your artist website on SPOZZ will allow you to interact directly<br> with your fans:
-        The perfect landing page to <span style="font-weight: bold;">monetize your<br>
-        creations, services, concert tickets and merchandise.</span><br><br>
     </span>
 </div>
 
@@ -59,11 +45,11 @@
         <label>Role<br>
             <select id="role" name="role" required>
                 <option>/ select your role</option>
-                <option value="Musician">Artist / Musician / Producer</option>
-                <option value="Publisher">Publisher</option>
-                <option value="Manager">Manager</option>
-                <option value="Label">Label</option>
-                <option value="Promotor">Promotor</option>
+                <option value="PH">Photographer</option>
+                <option value="PU">Publisher</option>
+                <option value="TM">Project Team member</option>
+                <option value="PM">Project Manager</option>
+                <option value="PP">Project Promotor</option>
                 <option value="Other">Other</option>
             </select>
         </label>
@@ -371,6 +357,7 @@
     .top {
         margin-top: 2rem;
         margin-bottom: 2rem;
+        max-width: 500px;
     }
     .submitted input:invalid {
 		border: 1px solid #c00;

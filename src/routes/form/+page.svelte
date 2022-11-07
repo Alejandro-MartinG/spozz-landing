@@ -13,17 +13,27 @@
     $: if(radioSelector === '1' && radioSelector2 === '') { disabled = true }
 
     const formUrl2 = './form2';
+    const formUrl22 = './form2-2';
+    const formUrl23 = './form2-3';
+    const formUrl24 = './form2-4';
     const formUrl3 = './form3';
     const formUrl32 = './form3-2';
     const formUrl33 = './form3-3';
     const routes = {
-        '1': formUrl2,
+        '1': {
+           'music': formUrl2,
+           'art': formUrl22,
+           'film': formUrl23,
+           'photo': formUrl24
+        },
         '2': formUrl3,
         '3': formUrl32,
         '4': formUrl33 
     }
 
-    const navigateForm = () => goto(routes[radioSelector]);
+    let route = '';
+    $: route = radioSelector === '1' ? routes[radioSelector][radioSelector2] : routes[radioSelector];
+    const navigateForm = () => goto(route);
 </script>
 
 <div class="cardo">
