@@ -6,9 +6,10 @@
         <ul class="menu">
             <li class="menu-item">
                 <span class="unselected-text text">CHECK OUT THE PROJECT</span>
+                <span class="selected-text text"> AND</span>
             </li>
             <li class="menu-item">
-                <span class="selected-text text">AND BECOME A MEMBER OF OUR GREAT COMMUNITY</span>
+                <span class="selected-text text">BECOME A MEMBER OF OUR GREAT COMMUNITY</span>
             </li>
         </ul>
     </div>
@@ -17,13 +18,13 @@
 <style>
     .top {
         width: 100%;
-        height: 360px;
+        height: 460px;
     }
     .grid-container {
         display: grid;
         gap: 0.5rem;
         grid-template-rows: 50% 50%;
-        grid-template-columns: 15% 15% 15% 20% 20% 15%;
+        grid-template-columns: 13% 15% 15% 20% 20% 15%;
     }
     .grid-item {
         position: relative;
@@ -31,32 +32,30 @@
     }
     .menu-box {
         display: flex;
-        height: 360px;
-        grid-column-start: 3;
+        height: 400px;
+        grid-column-start: 2;
         grid-column-end: 6;
         grid-row-start: 1;
         grid-row-end: 2;
         align-items: flex-end;
-        background-blend-mode:hard-light;
-        background-repeat: round;
     }
     .text {
-        text-align: right;
+        font-family: 'Montserrat', sans-serif;
+        text-align: left;
         letter-spacing: 0.04rem;
         line-height: 34px;
-        font-size: 28px;
+        font-size: 27.35pt;
         font-style: normal;
-        font-weight: 600;
     }
     .selected-text {
-        width: 841px;
-        color: #BF23FF;
+        color: #FFFFFF;
+        font-weight: 400;
     }
     .unselected-text {
-        width: 403px;
         color: #FFFFFF;
+        font-weight: 800;
     }
     .menu-item {
-        float: right;
+        float: left;
     }
 </style>
