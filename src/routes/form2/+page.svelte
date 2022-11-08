@@ -1,15 +1,10 @@
 <script>
     import headTitle from "$lib/images/music-title.png";
-	import CountryDropdown from "../../components/country-dropdown.svelte";
-    import CountryDrop from "../../components/country-dropdown.svelte"
 
     let radioSelector = 'yes';
     let selected = 'Plain';
     let submitted = false;
 
-
-    // /** @type {import('./$types').PageData} */
-    // export let get;
 
     function sendEmail(e) {
         console.log(e.target)
