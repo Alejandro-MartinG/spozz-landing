@@ -104,7 +104,6 @@
         mix-blend-mode:overlay;
     }
     .paragraph {
-        font-weight: Medium;
         font-weight: 400;
         font-size: 18pt;
         text-align: left;
