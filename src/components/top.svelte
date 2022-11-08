@@ -15,7 +15,7 @@
     <img class="top_background" src={top} alt="SvelteKit" />
 
     <div class="grid-item text">
-        <div>
+        <div  class="title-border">
             <span class="title">
                 OWN AND BENEFIT FROM<br>
                 YOUR FAVORITE MUSIC,<br>
@@ -97,6 +97,11 @@
         text-align: left;
         mix-blend-mode:overlay;
         line-height: 105%;
+    }
+    .title-border {
+        padding-bottom: .6rem;
+        border-bottom: 1px solid white;
+        mix-blend-mode:overlay;
     }
     .paragraph {
         font-weight: Medium;
