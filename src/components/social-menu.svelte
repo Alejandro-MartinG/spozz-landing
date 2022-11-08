@@ -53,20 +53,20 @@
         grid-template-rows: 10% 30% 20% 20% 20%;
         grid-template-columns: 50% 50%;
     }
-
+    span {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        letter-spacing: -0.05em;
+        mix-blend-mode: overlay;
+    }
     .follow {
         max-width: 100%;
-        font-style: normal;
-        font-weight: 500;
-        letter-spacing: -0.05em;
         color: #FFFFFF;
-        mix-blend-mode: overlay;
-        overflow: visible;
         white-space: nowrap;
         grid-column: 1;
         grid-row: 1;
         direction: rtl;
-        margin-right: 0.3rem;
+        margin-right: 1.8rem;
     }
 
     .vertical {
