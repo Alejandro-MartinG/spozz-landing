@@ -51,9 +51,9 @@
         width: 77%;
         margin: auto;
         color: rgba(255, 255, 255, 1);
-        font-family: Montserrat;
-        font-weight: Medium;
-        font-size: 24px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 28px;
         text-align: center;
         justify-content: center;
         vertical-align: middle;
@@ -62,8 +62,8 @@
     }
     button {
         margin: auto;
-        width: 139px;
-        height: 37px;
+        width: 161.739px;
+        height: 44.111px;
         overflow: hidden;
         background: #FFFFFF;
         mix-blend-mode: overlay;
@@ -73,10 +73,10 @@
     .button_text {
         vertical-align: middle;
         margin: auto;
-        width: 98px;
         color: rgba(74, 63, 91, 1);
-        font-weight: Medium;
-        font-size: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 10pt;
         text-align: center;
     }
 </style>
