@@ -1,11 +1,8 @@
 <script>
-    import windows from '$lib/images/windows.png'
-
-	$: backgroundImage = `background-image: url("${windows}");`;
 </script>
 
 <div class="top grid-container">
-    <div class="grid-item menu-box" style="{backgroundImage}">
+    <div class="grid-item menu-box">
         <ul class="menu">
             <li class="menu-item">
                 <span class="unselected-text text">CHECK OUT THE PROJECT</span>
