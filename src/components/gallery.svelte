@@ -146,7 +146,7 @@
     }
     .image > img {
         border-radius: 40px;
-        box-shadow: var(--shadow-elevation-high);
+        box-shadow: var(--shadow-elevation-medium);
     }
     .title {
         display: flex;
