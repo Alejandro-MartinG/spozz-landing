@@ -26,33 +26,33 @@
         <nav class="nav">
             <ul class="menu">
                 <li class="menu-item">
-                    <a href={undefined} on:click|preventDefault={event =>handleClick('bg1')}>
-                        <span>SPOZZ MARKETPLACE (BETA)</span>
+                    <a href={null} on:click|preventDefault={event =>handleClick('bg1')}>
+                        SPOZZ MARKETPLACE (BETA)
                     </a> 
                 </li>
                 <li class="menu-item">
                     <a href={null} on:click|preventDefault={event =>handleClick('bg2')}>
-                        <span>SPOZZ BLOG (BETA)</span>
+                        SPOZZ BLOG (BETA)
                     </a> 
                 </li>
                 <li class="menu-item">
                     <a href={null} on:click|preventDefault={event =>handleClick('bg3')}>
-                        <span>SPOZZ TOKENIZZER (BETA)</span>
+                        SPOZZ TOKENIZZER (BETA)
                     </a> 
                 </li>
                 <li class="menu-item">
                     <a href={null} on:click|preventDefault={event =>handleClick('bg4')}>
-                        <span>JOIN OUR DISCORD</span>
+                        JOIN OUR DISCORD
                     </a> 
                 </li>
                 <li class="menu-item">
                     <a href={null} on:click|preventDefault={event =>handleClick('bg5')}>
-                        <span>SPOZZ TOKEN</span>
+                        SPOZZ TOKEN
                     </a> 
                 </li>
                 <li class="menu-item">
                     <a href={null} on:click|preventDefault={event =>handleClick('bg6')}>
-                        <span>PROJECT INFORMATION</span>
+                        PROJECT INFORMATION
                     </a> 
                 </li>
             </ul>
@@ -77,36 +77,19 @@
         max-width: 100%;
         height: 750px;
     }
-
     .menu {
+        margin-top: 10rem;
         grid-column: 3;
         text-align: right;
     }
-
     .screen {
         grid-column: 2;
         grid-row: 1;
     }
-
     a {
         text-decoration: none;
-        color: var(--color-link);
         outline: none;
-    }
-    a:hover, a:focus {
-        color: white;
-        outline: none;
-        border-bottom: 1px solid white;
-    }
-    .grid-item {
-        position: relative;
-        margin: auto;
-    }
-
-    span {
-        background-color: transparent;
         font-family: 'Montserrat';
-        font-style: normal;
         font-weight: 600;
         font-size: 22px;
         line-height: 27px;
@@ -118,9 +101,9 @@
         color: #BF23FF;
         mix-blend-mode: color-dodge;
     }
-    span:hover {
+    a:hover, a:focus, a:active, a:link {
+        outline: none;
         font-family: 'Montserrat';
-        font-style: normal;
         font-weight: 600;
         font-size: 22px;
         line-height: 27px;
@@ -130,6 +113,12 @@
         margin: auto;
         align-self: center;
         justify-content: center;
+        mix-blend-mode: normal;
+        border-bottom: 1px solid white;
+    }
+    .grid-item {
+        position: relative;
+        margin: auto;
     }
     .menu-item {
         cursor: pointer;

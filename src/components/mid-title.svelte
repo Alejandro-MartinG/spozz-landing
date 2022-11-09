@@ -18,12 +18,11 @@
 <style>
     .top {
         width: 100%;
-        height: 460px;
+        height: 360px;
     }
     .grid-container {
         display: grid;
         gap: 0.5rem;
-        grid-template-rows: 50% 50%;
         grid-template-columns: 13% 15% 15% 20% 20% 15%;
     }
     .grid-item {
