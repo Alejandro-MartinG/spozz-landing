@@ -1,9 +1,5 @@
 <script>
-    import { backgroundStore } from './mid-background-store';
-    import Gallery from "./gallery.svelte"
     import Screen from "./screen/marketplace.svelte"
-    import Background from './background.svelte'
-    import frameBig from "$lib/images/gallery/frame_b.png";
 
     // Screen context
     let screen = 'a';
@@ -22,8 +18,6 @@
 </script>
 
 <div class="mid grid-container">
-    <Background value={$backgroundStore}></Background>
-    
     <div class="grid-item screen">
         <Screen value={screen}></Screen>
     </div>
@@ -65,39 +59,32 @@
         </nav>
     </div>
 
-    <div class="grid-item extend">
-        <img class="wrap" src={frameBig}  alt="SvelteKit"/>
-        <div class="row center">
-            <Gallery></Gallery>
-        </div>
-    </div>
 </div>
 
 <style>
     .mid {
-        height: 1500px;
         max-width: 100%;
         padding-top: 4rem;
+        margin-bottom: 4rem;
     }
     .grid-container {
         display: grid;
         gap: 0.5rem;
-        grid-template-rows: 50% 50%;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 13% 52% 23% 12%;
         padding: 1rem;
         overflow:hidden;
         align-self: center;
         max-width: 100%;
+        height: 750px;
     }
 
     .menu {
-        grid-column: 2;
-        grid-row: 1;
+        grid-column: 3;
         text-align: right;
     }
 
     .screen {
-        grid-column: 1;
+        grid-column: 2;
         grid-row: 1;
     }
 
@@ -107,51 +94,10 @@
         outline: none;
     }
     a:hover, a:focus {
-        color: var(--color-link-hover);
+        color: white;
         outline: none;
+        border-bottom: 1px solid white;
     }
-
-    .extend {
-        grid-row: 2;
-        grid-column-start: 1;
-        grid-column-end: 3;
-        gap: 0.5rem;
-        z-index: 5;
-        padding-top: 8rem;
-        padding-bottom: 8rem;
-        align-self: center;
-        justify-content: center;
-        max-width: 100%;
-    }
-    .wrap {
-        opacity: .15;
-        position: absolute;
-        size: auto;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        mix-blend-mode: overlay;
-    }
-
-    .row{
-        position:relative;
-        margin: auto;
-    }
-    .center {
-        display: flex;
-        margin: auto;
-        align-self: center;
-        justify-content: center;
-        max-width: 80%;
-
-        /*
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        */
-    }
-
     .grid-item {
         position: relative;
         margin: auto;
