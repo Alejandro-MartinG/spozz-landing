@@ -49,11 +49,10 @@
 <style>
     p {
         color: #BF23FF;
-        mix-blend-mode: color-dodge;
         margin-bottom: 0;
         font-style: italic;
         font-family: 'Montserrat', sans-serif;
-        font-size: 15pt;
+        font-size: 13pt;
         mix-blend-mode: color-dodge;
     }
     .link-title {

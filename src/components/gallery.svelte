@@ -138,9 +138,9 @@
     p {
         color: #FFFFFF;
         font-family: 'Montserrat', sans-serif;
-        font-weight: 500;
-        font-size: 17pt;
-        line-height: 25pt;
+        font-weight: 300;
+        font-size: 14pt;
+        line-height: 16pt;
         text-align: justify;
         padding: 2rem 3rem .9rem 3.5rem;
     }
@@ -161,7 +161,8 @@
     .title > span {
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
-        font-size: 18pt;
+        font-size: 15pt;
+        line-height: 15pt;
         color: #BF23FF;
         mix-blend-mode: color-dodge;
     }

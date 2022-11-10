@@ -37,10 +37,10 @@
 </script>
 
 <div class="cardo">
-  <div class="card-header">CHOOSE THE ROLE THAT BEST DESCRIBES YOU</div>
+  <div class="card-header">Choose the Role that best describes you</div>
 
   <div class="card-body">
-    <div class="column-title">CHOOSE THE GENRE THAT BEST DESCRIBES YOUR ART</div>
+    <div class="column-title">Choose the genre that best describes your art</div>
     <div class="card-radio">
         <label>
             <input type="radio" bind:group={radioSelector} value="1">
@@ -112,11 +112,12 @@
     }
     .column-title {
         height: 50px;
-        padding: 0.4rem 0.8rem 0.4rem 1rem;
+        padding: 0.7rem 1.5rem 0.5rem 2.5rem;
         grid-column: 2;
-        font-size: 13px;
-        line-height: 132.1%;
-        letter-spacing: 0.085em;
+        font-size: 12px;
+        font-weight: 800;
+        line-height: 102%;
+        letter-spacing: 0.01em;
 
         border: 1px solid;
         border-radius: 150px;
@@ -130,6 +131,8 @@
     }
 
     .card-header {
+        font-weight: 600;
+        font-size: 10pt;
         display: block;
         text-align: center;
         color: #fff;

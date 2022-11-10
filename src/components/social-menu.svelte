@@ -55,7 +55,7 @@
     }
     span {
         font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
+        font-weight: 400;
         letter-spacing: -0.05em;
         mix-blend-mode: overlay;
     }

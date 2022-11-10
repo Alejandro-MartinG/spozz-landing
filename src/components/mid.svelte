@@ -124,4 +124,7 @@
         cursor: pointer;
         padding: 0.5rem;
     }
+    li {
+        list-style-type: none;  
+    }
 </style>

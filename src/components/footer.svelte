@@ -12,7 +12,7 @@
 <footer>
     <NavbarBrand  href="/" class="logo_box">
         <img class="logo" src={fooIcon} alt="SvelteKit" />
-        <span class="brand_text"> | SPOZZ</span>
+        <span class="brand_text">| SPOZZ</span>
     </NavbarBrand>
 
     <img class="line" src={line} alt="SvelteKit" />
@@ -50,7 +50,7 @@
     .line {
         margin: auto;
         vertical-align: middle;
-        height: 1.7px;
+        height: 2px;
         max-width: 100%;
         transform: rotate(0.02deg);
     }
@@ -78,7 +78,7 @@
 
     .rights {
         font-style: normal;
-        font-weight: 600;
+        font-weight: 400;
         font-size: 10px;
         line-height: 132.1%;
         letter-spacing: 0.15em;

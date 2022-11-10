@@ -40,7 +40,7 @@
         </p>
 
         <button class="button" on:click={navigateForm}>
-            <span class="v1_36">Join to SPOZZ.Club</span>
+            <span class="v1_36">Join SPOZZ.Club</span>
         </button>
     </div>
 
@@ -55,6 +55,7 @@
     .top {
         width: 100%;
         height: 605px;
+        margin-bottom: 7rem;
     }
     .top_background {
         height: 795px;
@@ -64,8 +65,8 @@
     .grid-container {
         display: grid;
         gap: 0.5rem;
-        grid-template-rows: 25% 25% 40%;
-        grid-template-columns: 15% 15% 22% 10% 10% 12% 16%;
+        grid-template-rows: 25% 25% 25% 25% 25% 25%;
+        grid-template-columns: 15% 15% 22% 22% 15.1% 11%;
     }
     .grid-item {
         position: relative;
@@ -78,21 +79,21 @@
         grid-row-end: 3;
     }
     .welcome {
-        grid-column-start: 6;
-        grid-column-end: 7;
-        grid-row-start: 4;
-        grid-row-end: 4;
+        margin-top: 4rem;
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 5;
+        grid-row-end: 6;
         opacity: .4;
     }
     .menu-social {
-        grid-column-start: 7;
-        grid-column-end: 7;
-        grid-row-start: 3;
+        grid-column: 6;
+        grid-row-start: 8;
         grid-row-end: 3;
     }
     .title {
         font-family: 'Montserrat', sans-serif;
-        font-weight: 900;
+        font-weight: 750;
         font-size: 37.42pt;
         text-align: left;
         mix-blend-mode:overlay;
@@ -104,10 +105,10 @@
         mix-blend-mode:overlay;
     }
     .paragraph {
-        font-weight: 400;
-        font-size: 18pt;
+        font-weight: 320;
+        font-size: 15pt;
         text-align: left;
-        line-height: 90%;
+        line-height: 100%;
         text-align: justify;
         text-justify: inter-word;
         color: rgba(255, 255, 255, 1);
@@ -116,7 +117,7 @@
         font-family: 'Montserrat', sans-serif;
         font-weight: 700;
         color: #31286d;
-        font-size: 11pt;
+        font-size: 10pt;
         text-align: left;
     }
     .button {

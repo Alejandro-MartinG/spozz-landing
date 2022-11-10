@@ -21,7 +21,7 @@
 
         <Row>
             <button on:click={navigateForm}>
-                <span class="button_text">Join to SPOZZ.Club</span>
+                <span class="button_text">Join SPOZZ.Club</span>
             </button>
         </Row>
     </Row>
@@ -52,13 +52,15 @@
         margin: auto;
         color: rgba(255, 255, 255, 1);
         font-family: 'Montserrat', sans-serif;
-        font-weight: 500;
-        font-size: 28px;
+        font-weight: 300;
+        font-size: 23pt;
+        line-height: 22pt;
         text-align: center;
         justify-content: center;
         vertical-align: middle;
         align-items: center;
         padding: 2rem;
+        padding-bottom: 0rem;
     }
     button {
         margin: auto;
@@ -66,9 +68,9 @@
         height: 44.111px;
         overflow: hidden;
         background: #FFFFFF;
-        mix-blend-mode: overlay;
         border-radius: 7px;
         border: none;
+        opacity: .8;
     }
     .button_text {
         vertical-align: middle;

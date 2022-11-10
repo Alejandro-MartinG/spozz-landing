@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<div class="top grid-container">
+<div class="grid-container">
     <div class="grid-item menu-box">
         <ul class="menu">
             <li class="menu-item">
@@ -16,11 +16,9 @@
 </div>
 
 <style>
-    .top {
-        width: 100%;
-        height: 360px;
-    }
     .grid-container {
+        margin-top: 12rem;
+        width: 100%;
         display: grid;
         gap: 0.5rem;
         grid-template-columns: 13% 15% 15% 20% 20% 15%;
@@ -31,7 +29,7 @@
     }
     .menu-box {
         display: flex;
-        height: 400px;
+        height: 130px;
         grid-column-start: 2;
         grid-column-end: 6;
         grid-row-start: 1;
@@ -43,7 +41,7 @@
         text-align: left;
         letter-spacing: 0.04rem;
         line-height: 34px;
-        font-size: 27.35pt;
+        font-size: 23.35pt;
         font-style: normal;
     }
     .selected-text {
@@ -52,7 +50,7 @@
     }
     .unselected-text {
         color: #FFFFFF;
-        font-weight: 800;
+        font-weight: 600;
     }
     .menu-item {
         float: left;
