@@ -19,22 +19,22 @@
 <img class="title" src={headTitle}  alt="SvelteKit"/>
 
 <div class="top">
-    <span style="font-weight: bold;">Musicians: Earn more and get paid directly and instantly<br> for your songs!<br><br></span>
+    <span class="title-line"><span class="title-word">Musicians:</span> Earn more and get paid directly and instantly<br> for your songs!<br><br></span>
 
-    <span>
-        On SPOZZ.club you can <span style="font-weight: bold;">sell your songs as NFTs</span> to fans, traders,<br>
+    <p class="paragraph">
+        On SPOZZ.club you can sell your songs as NFTs to fans, traders,<br>
         and investors.
-        For every secondary sale you will <span style="font-weight: bold;">collect trading<br> royalties.</span><br><br>
+        For every secondary sale you will collect trading<br> royalties.<br><br>
 
-        You can <span style="font-weight: bold;">distribute your music to all major streaming platforms.</span><br><br>
+        You can distribute your music to all major streaming platforms.<br><br>
 
-        <span style="font-weight: bold;">Sell song royalties as NFTs and cash-in immediately:</span> fully or<br> partially,
+        Sell song royalties as NFTs and cash-in immediately: fully or<br> partially,
         you choose!<br><br>
 
         Your artist website on SPOZZ will allow you to interact directly<br> with your fans:
-        The perfect landing page to <span style="font-weight: bold;">monetize your<br>
-        creations, services, concert tickets and merchandise.</span><br><br>
-    </span>
+        The perfect landing page to monetize your<br>
+        creations, services, concert tickets and merchandise.<br><br>
+    </p>
 </div>
 
 <div class="cardo">
@@ -43,13 +43,13 @@
   <div class="card-body">
     <form class="content" class:submitted on:submit|preventDefault={sendEmail}>
         <label>Artist / Band Name<br>
-            <input id="name" name="name" type="text"  placeholder="/ enter information" autocomplete required/>
+            <input id="name" name="name" type="text"  placeholder="    / enter information" autocomplete required/>
         </label>
         <label>Contact Person First Name<br>
-            <input id="first-name" name="first-name" type="text" placeholder="/ enter information" autocomplete required/>
+            <input id="first-name" name="first-name" type="text" placeholder="    / enter information" autocomplete required/>
         </label>
         <label>Contact Person Last Name<br>
-            <input id="last-name" name="last-name" type="text" placeholder="/ enter information" autocomplete required/>
+            <input id="last-name" name="last-name" type="text" placeholder="    / enter information" autocomplete required/>
         </label>
         <label>Role<br>
             <select id="role" name="role" required>
@@ -63,14 +63,14 @@
             </select>
         </label>
         <label>E-Mail<br>
-            <input id="email" name="email" type="email" autocomplete placeholder="/ enter your email@domain" required value=''/>
+            <input id="email" name="email" type="email" autocomplete placeholder="    / enter your email@domain" required value=''/>
         </label>
         <label>Phone<br>
-            <input id="phone" name="phone" type="tel" placeholder="/ enter information" autocomplete required/>
+            <input id="phone" name="phone" type="tel" placeholder="    / enter information" autocomplete required/>
         </label>
         <label>Country<br>
             <select id="country" name="country" required>
-                <option>select country</option>
+                <option>/ select country</option>
                 <option value="AF">Afghanistan</option>
                 <option value="AX">Aland Islands</option>
                 <option value="AL">Albania</option>
@@ -322,22 +322,22 @@
             </select>
         </label>
         <label>Spotify<br>
-            <input type="text" placeholder="/ enter information"/>
+            <input type="text" placeholder="    / enter information"/>
         </label>
         <label>Youtube<br>
-            <input type="text" placeholder="/ enter information"/>
+            <input type="text" placeholder="    / enter information"/>
         </label>
         <label>Instagram<br>
-            <input type="text" placeholder="/ enter information"/>
+            <input type="text" placeholder="    / enter information"/>
         </label>
         <label>Twitter<br>
-            <input type="url" placeholder="/ enter information"/>
+            <input type="url" placeholder="    / enter information"/>
         </label>
         <label>Website<br>
-            <input type="url" placeholder="/ enter information"/>
+            <input type="url" placeholder="    / enter information"/>
         </label>
         <label>Comments<br>
-            <input class="comment" type="text" placeholder=""/>
+            <input class="comment" type="text"/>
         </label>
 
         <div class="bottom-text">
@@ -348,13 +348,15 @@
         <div class="card-radio">
             <span class="blue-text">Do you want to receive news by e-mail and subscribe to our newsletter?<br></span>
 
-            <label>
-                <input type="radio" bind:group={radioSelector} value="yes">Yes 
-            </label>
+            <div class="radio-buttons">
+                <label>
+                    <input type="radio" bind:group={radioSelector} value="yes">Yes 
+                </label>
 
-            <label>
-                <input type="radio" bind:group={radioSelector} value="no">No 
-            </label>
+                <label>
+                    <input type="radio" bind:group={radioSelector} value="no">No 
+                </label>
+            </div>
         </div>
 
         <button type="submit" class="btn btn-primary" on:click={() => submitted = true}>SUBMIT</button>
@@ -367,6 +369,18 @@
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
+    .title-word {
+        font-weight: 800;
+    }
+    .title-line {
+        font-weight: 600;
+    }
+    .paragraph {
+        line-height: 15pt;
+        color: #ffff;
+        text-align: justify;
+        text-justify: inter-word;
+    }
     .submitted input:invalid {
 		border: 1px solid #c00;
 	}
@@ -376,6 +390,7 @@
 	}
     .blue-text {
         font-weight: bold;
+        font-size: 10pt;
         text-transform: capitalize;
         background: linear-gradient(90deg, #713ACA 0%, #4786D6 100%);
         -webkit-background-clip: text;
@@ -406,6 +421,7 @@
         font-weight: bold;
         display: block;
         text-align: center;
+        font-size: 10pt;
         color: #fff;
         background: linear-gradient(90deg, #713ACA 0%, #4786D6 100%);
     }
@@ -464,8 +480,12 @@
     }
     input {
         outline: none;
+        font-size: 9pt;
     }
     select {
+        font-size: 9pt;
+        text-indent: 7pt;
+        background-color: white;
         accent-color: rgb(93, 53, 252);
         max-width: 580px;
         width: 100%;
@@ -476,8 +496,18 @@
         outline: none;
         height: 35.5px;
     }
-    .card-radio > label {
+    .radio-buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
         margin-top: .5rem;
+        margin-right: 2.3rem;
+    }
+    .radio-buttons > label > input {
+        margin-left: 2rem;
+        margin-right: .7rem;
+        margin-bottom: 3rem;
     }
     button {
         margin-bottom: .5rem;
