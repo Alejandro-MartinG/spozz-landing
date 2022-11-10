@@ -24,7 +24,7 @@
         <div>
             <span style="font-weight: bold;">Subscribe to our newsletter and receive regular updates about<br> the SPOZZ.club project by e-mail.<br></span>
             <form>
-                <label>E-Mail:<input type="email" placeholder="  /enter your email"></label>
+                <label>E-Mail:<input type="email" placeholder="    /enter your email"></label>
                 <a href={null} class="btn-p btn btn-primary">SUBMIT</a>
             </form>
         </div>
@@ -33,7 +33,7 @@
 
         <div>
             <span class="center-text" style="font-weight: bold;">
-                Thank you!<br>
+                THANK YOU!<br>
                 We appreciate your interest in SPOZZ.club very much!<br>
                 Check out our awesome community and become a member today!<br>
             </span>
@@ -42,7 +42,6 @@
                 <a href={null} class="btn1 btn btn-primary">GET A SPOZZ MEMBERSHIP AVATAR</a>
             </div>
         </div>
-
     </div>
 
     <Footer></Footer>
@@ -81,23 +80,34 @@
     .btn1 {
         margin: auto;
         margin-top: 1rem;
-        font-size: 12px;
+        font-size: 10px;
         line-height: 132%;
         letter-spacing: 0.105em;
         border-radius: 5px;
         border: 1px solid #FFFFFF;
         background-color: transparent;
     }
+    .btn1:hover {
+        margin: auto;
+        margin-top: 1rem;
+        font-size: 10px;
+        line-height: 132%;
+        letter-spacing: 0.105em;
+        border-radius: 5px;
+        border: none;
+        background: linear-gradient(90deg, #713ACA 0%, #4786D6 100%);
+    }
     .center-text {
         display: flex;
         text-align: center;
-        line-height: 30px;
-        text-transform: uppercase;
+        line-height: 17px;
+        font-size: 10pt;
+        font-weight: 500;
     }
     .btn-p {
         margin: auto;
         width: 107px;
-        font-size: 11px;
+        font-size: 10px;
         line-height: 132.1%;
         letter-spacing: 0.105em;
         background: linear-gradient(90deg, #713ACA 0%, #4786D6 100%);
@@ -118,6 +128,7 @@
         display: inline-flex;
         accent-color: rgb(93, 53, 252);
         border-radius: 10px;
+        font-size: 9pt;
         max-width: 370px;
         width: 370px;
         border: none;

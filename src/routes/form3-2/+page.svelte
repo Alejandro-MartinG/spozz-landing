@@ -5,7 +5,7 @@
 <img class="title" src={title}  alt="SvelteKit"/>
 
 <div class="cardo">
-  <div class="card-header">invest</div>
+  <div class="card-header">Invest</div>
   <div class="card-body">
     Invest in valuable artwork of upcoming artists. 
     Sense what's hot and trendy and buy early into new limited releases.
@@ -14,7 +14,7 @@
 </div>
 
 <div class="cardo">
-  <div class="card-header">spozz token</div>
+  <div class="card-header">Spozz Token</div>
   <div class="card-body">
     Claim SPOZZ tokens in the Airdrop and stake them for participation in the benefits of the marketplace. 
     Receive rewards for selling your NFTs on SPOZZ.club.
@@ -56,9 +56,9 @@
         color: #fff;
         background: linear-gradient(90deg, #713ACA 0%, #4786D6 100%);
         font-family: 'Montserrat';
-        font-weight: 800;
+        font-weight: bold;
         letter-spacing: -0.03em;
-        text-transform: uppercase;
+        font-size: 10pt;
     }
     .title {
         mix-blend-mode: overlay;
