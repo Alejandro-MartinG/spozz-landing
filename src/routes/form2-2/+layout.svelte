@@ -26,7 +26,7 @@
 
         <div>
             <span class="center-text" style="font-weight: bold;">
-                Thank you!<br>
+                THANK YOU!<br>
                 We appreciate your interest in SPOZZ.club very much!<br>
                 Check out our awesome community and become a member today!<br>
             </span>
@@ -69,22 +69,33 @@
     .btn1 {
         margin: auto;
         margin-top: 1rem;
-        font-size: 12px;
+        font-size: 10px;
         line-height: 132%;
         letter-spacing: 0.105em;
         border-radius: 5px;
         border: 1px solid #FFFFFF;
         background-color: transparent;
     }
+    .btn1:hover {
+        margin: auto;
+        margin-top: 1rem;
+        font-size: 10px;
+        line-height: 132%;
+        letter-spacing: 0.105em;
+        border-radius: 5px;
+        border: none;
+        background: linear-gradient(90deg, #713ACA 0%, #4786D6 100%);
+    }
     .center-text {
         display: flex;
         text-align: center;
-        line-height: 30px;
-        text-transform: uppercase;
+        line-height: 17px;
+        font-size: 10pt;
+        font-weight: 500;
     }
     .line {
         width: 100%;
         max-width: 250px;
-        margin: 2rem 2rem .5rem 2rem;
+        margin: 1rem 2rem .5rem 2rem;
     }
 </style>
