@@ -26,32 +26,32 @@
         <nav class="nav">
             <ul class="menu">
                 <li class="menu-item">
-                    <a href={null} on:click|preventDefault={event =>handleClick('bg1')}>
+                    <a href={null} class="{screen === "a" ? 'selected': ''}" on:click|preventDefault={event =>handleClick('bg1')}>
                         SPOZZ MARKETPLACE (BETA)
                     </a> 
                 </li>
                 <li class="menu-item">
-                    <a href={null} on:click|preventDefault={event =>handleClick('bg2')}>
+                    <a href={null} class="{screen === "b" ? 'selected': ''}" on:click|preventDefault={event =>handleClick('bg2')}>
                         SPOZZ BLOG (BETA)
                     </a> 
                 </li>
                 <li class="menu-item">
-                    <a href={null} on:click|preventDefault={event =>handleClick('bg3')}>
+                    <a href={null} class="{screen === "c" ? 'selected': ''}" on:click|preventDefault={event =>handleClick('bg3')}>
                         SPOZZ TOKENIZZER (BETA)
                     </a> 
                 </li>
                 <li class="menu-item">
-                    <a href={null} on:click|preventDefault={event =>handleClick('bg4')}>
+                    <a href={null} class="{screen === "d" ? 'selected': ''}" on:click|preventDefault={event =>handleClick('bg4')}>
                         JOIN OUR DISCORD
                     </a> 
                 </li>
                 <li class="menu-item">
-                    <a href={null} on:click|preventDefault={event =>handleClick('bg5')}>
+                    <a href={null} class="{screen === "e" ? 'selected': ''}" on:click|preventDefault={event =>handleClick('bg5')}>
                         SPOZZ TOKEN
                     </a> 
                 </li>
                 <li class="menu-item">
-                    <a href={null} on:click|preventDefault={event =>handleClick('bg6')}>
+                    <a href={null} class="{screen === "f" ? 'selected': ''}" on:click|preventDefault={event =>handleClick('bg6')}>
                         PROJECT INFORMATION
                     </a> 
                 </li>
@@ -102,6 +102,21 @@
         mix-blend-mode: color-dodge;
     }
     a:hover, a:focus, a:active, a:link {
+        outline: none;
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 27px;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+        text-align: right;
+        margin: auto;
+        align-self: center;
+        justify-content: center;
+        mix-blend-mode: normal;
+        border-bottom: 1px solid white;
+    }
+    .selected {
         outline: none;
         font-family: 'Montserrat';
         font-weight: 600;
