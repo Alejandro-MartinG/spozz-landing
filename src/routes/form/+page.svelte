@@ -64,32 +64,35 @@
     </div>
 
     <div class="card-radio-2">
-        <label>
+        <label class="{radioSelector !== "1" ? 'selected': ''}">
             <input type="radio" bind:group={radioSelector2} value="music" disabled={disableRadio2}>
             Music
         </label>
 
-        <label>
+        <label class="{radioSelector !== "1" ? 'selected': ''}">
             <input type="radio" bind:group={radioSelector2} value="art" disabled={disableRadio2}>
             Digital Art, Collectibles
         </label>
 
-        <label>
+        <label class="{radioSelector !== "1" ? 'selected': ''}">
             <input type="radio" bind:group={radioSelector2} value="film" disabled={disableRadio2}>
             Video Art, Film and Animations
         </label>
 
-        <label>
+        <label class="{radioSelector !== "1" ? 'selected': ''}">
             <input type="radio" bind:group={radioSelector2} value="photo" disabled={disableRadio2}>
             Photography
         </label>
     </div>
 
-    <button href={null} class="btn btn-primary" disabled={disabled} on:click={navigateForm}>NEXT</button>
+    <button href={null} class="{radioSelector !== "1" && radioSelector !== '' ? 'btn-selected': ''} btn btn-primary" disabled={disabled} on:click={navigateForm}>NEXT</button>
   </div>
 </div>
 
 <style>
+    .selected {
+        opacity: .4;
+    }
     .cardo {
         position: relative;
         margin: auto;
@@ -163,6 +166,20 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         border-radius: 5px;
+    }
+    .btn-selected {
+        margin: auto;
+        grid-row: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 107px;
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        color: #fff;
+        background: linear-gradient(90deg, #713ACA 0%, #4786D6 100%);
+        border-radius: 5px;
+        -webkit-text-fill-color: #FFFFFF;
+        border-color: linear-gradient(90deg, #713ACA 0%, #4786D6 100%);
     }
     label {
         font-family: 'Montserrat';
