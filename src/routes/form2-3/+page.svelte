@@ -478,6 +478,7 @@
     input {
         outline: none;
         font-size: 9pt;
+        accent-color: rgb(93, 53, 252);
     }
     select {
         font-size: 9pt;
