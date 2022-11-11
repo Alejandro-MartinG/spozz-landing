@@ -143,12 +143,12 @@
     }
 
     .card-radio {
-        margin: .5rem .5rem .5rem 2rem;
+        margin: .5rem .5rem 1.5rem 2rem;
         display: flex;
         flex-direction: column;
     }
     .card-radio-2 {
-        margin: .5rem .5rem .5rem 1.7rem;
+        margin: .5rem .5rem 1.5rem 1.7rem;
         display: flex;
         flex-direction: column;
         float: right;
