@@ -85,7 +85,7 @@
         </label>
     </div>
 
-    <button href={null} class="{radioSelector !== "1" && radioSelector !== '' ? 'btn-selected': ''} btn btn-primary" disabled={disabled} on:click={navigateForm}>NEXT</button>
+    <button href={null} class="{radioSelector !== "1" && radioSelector !== '' || radioSelector === "1" && radioSelector2 !== ''? 'btn-selected': ''} btn btn-primary" disabled={disabled} on:click={navigateForm}>NEXT</button>
   </div>
 </div>
 
