@@ -156,7 +156,6 @@
         text-transform: uppercase;
     }
     .title-right {
-        align-items: end;
         text-align: right;
     }
     .title > span {
