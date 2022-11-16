@@ -22,9 +22,14 @@
 <img class="title" src={headTitle}  alt="SvelteKit"/>
 
 <div class="top">
-    <span class="title-line"><span class="title-word"></span><br><br></span>
+    <span class="title-line"><span class="title-word"></span>Sell your photos directly and choose the licensing scheme you want!<br><br></span>
 
-    <p class="paragraph"></p>
+    <p class="paragraph">
+        On SPOZZ.club you can sell your photos directly, build a personal artist page and promote your work!<br><br>
+        You get paid immediately for every sale and can collect royalties from secondary sales.<br><br>
+        SPOZZ.club provides you a set of tools to create any number of NFTs from your photos and to promote and monetize it.<br><br>
+        Choose from different licensing models and avoid the middlemen commissions.
+    </p>
 </div>
 
 <div class="cardo">

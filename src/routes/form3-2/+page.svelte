@@ -7,8 +7,8 @@
 <div class="cardo">
   <div class="card-header">Invest</div>
   <div class="card-body">
-    Invest in valuable artwork of upcoming artists. 
-    Sense what's hot and trendy and buy early into new limited releases.
+    Invest in valuable artwork of upcoming artists.<br><br>
+    Assess what's hot and trendy and buy early into new limited releases.<br><br> 
     You may sell it later to the secondary market on SPOZZ.club or any other NFT marketplace.
   </div>
 </div>
@@ -16,8 +16,8 @@
 <div class="cardo">
   <div class="card-header">Spozz Token</div>
   <div class="card-body">
-    Claim SPOZZ tokens in the Airdrop and stake them for participation in the benefits of the marketplace. 
-    Receive rewards for selling your NFTs on SPOZZ.club.
+    Claim SPOZZ tokens in the airdrop and stake them for participation in the benefits of the marketplace.<br><br> 
+    Receive rewards for selling your NFTs on SPOZZ.club
   </div>
 </div>
 
@@ -46,7 +46,6 @@
         font-size: 14px;
         line-height: 17px;
         letter-spacing: -0.05em;
-        text-transform: capitalize;
 
         color: #5658CF;
     }

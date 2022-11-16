@@ -5,17 +5,18 @@
 <img class="title" src={title}  alt="SvelteKit"/>
 
 <div class="cardo">
-  <div class="card-header">Music fans : Own a song of your preferred artist</div>
+  <div class="card-header">Music fans : Own a song of your preferred artist:</div>
   <div class="card-body">
-    You can now buy a song, listen to it, collect it and earn royalties from its reproduction in streaming and broadcast media. You can sell it anytime or surprise a person you like with a gift!
+    You can now buy a song, listen to it, collect it and earn royalties from its reproduction on streaming.<br><br>
+    You can sell it anytime or surprise someone with a gift!
   </div>
 </div>
 
 <div class="cardo">
-  <div class="card-header">Investors, collectors and traders</div>
+  <div class="card-header">Investors, collectors and traders:</div>
   <div class="card-body">
-    Buy your favorite artist’s newest creations of art on SPOZZ.club: 
-    Sense what’s hot and trendy, buy early into new limited releases and build a valuable collection of digital artworks.
+    Buy your favorite artist’s newest creations on SPOZZ.club!<br><br> 
+    Assess what’s hot and trendy, buy early into new limited releases and build a valuable collection of digital artworks.
   </div>
 </div>
 
@@ -44,7 +45,6 @@
         font-size: 14px;
         line-height: 17px;
         letter-spacing: -0.05em;
-        text-transform: capitalize;
 
         color: #5658CF;
     }

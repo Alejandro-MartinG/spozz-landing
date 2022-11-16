@@ -22,11 +22,12 @@
 <img class="title" src={headTitle}  alt="SvelteKit"/>
 
 <div class="top">
-    <span class="title-line"><span class="title-word">Artists:</span> Monetize your digital art to a great community of art lovers, collectors and traders.<br><br></span>
+    <span class="title-line"><span class="title-word">Artists:</span> Sell your digital art to a great community of art lovers, collectors and traders.<br><br></span>
 
     <p class="paragraph">
-        On SPOZZ.club you can sell your digital art as an NFT to a great community of art lovers, collectors, traders and investors. You receive funds from sales immediately and collect royalties from secondary sales.<br><br>
-        SPOZZ.club provides you a set of great tools and instruments to create any number of NFTs from your digital art and to promote and monetize it. 
+        On SPOZZ.club you can sell your digital art as an NFT to a great community of art lovers, collectors, traders and investors.<br><br>
+        You receive funds immediately and collect royalties from secondary sales.<br><br>
+        SPOZZ.club provides you a set of useful instruments to create any number of NFTs from your digital art and to promote and monetize it. 
     </p>
 </div>
 
