@@ -104,6 +104,7 @@
         align-self: center;
         max-width: 100%;
         margin-bottom: 6rem;
+        margin-top: 9rem;
     }
     .grid-container {
         grid-column: 2;

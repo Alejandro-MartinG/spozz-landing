@@ -58,7 +58,6 @@
             </ul>
         </nav>
     </div>
-
 </div>
 
 <style>
@@ -71,11 +70,11 @@
         display: grid;
         gap: 0.5rem;
         grid-template-columns: 13% 52% 23% 12%;
-        padding: 1rem;
+        padding: 0rem 1rem 1rem 1rem;
         overflow:hidden;
         align-self: center;
         max-width: 100%;
-        height: 750px;
+        height: 640px;
     }
     .menu {
         margin-top: 10rem;

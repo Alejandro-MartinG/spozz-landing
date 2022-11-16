@@ -53,7 +53,7 @@
         color: rgba(255, 255, 255, 1);
         font-family: 'Montserrat', sans-serif;
         font-weight: 300;
-        font-size: 23pt;
+        font-size: 18pt;
         line-height: 22pt;
         text-align: center;
         justify-content: center;
