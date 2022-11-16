@@ -67,7 +67,7 @@
         display: inline-flex;
         flex-direction: column;
         align-items:center;
-        margin: 7rem 6rem 16rem 6rem;
+        margin: 9rem 6rem 18rem 6rem;
         align-self: center;
     }
     .title {
