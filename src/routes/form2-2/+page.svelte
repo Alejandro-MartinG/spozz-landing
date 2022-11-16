@@ -1,5 +1,6 @@
 <script>
     import headTitle from "$lib/images/digital-art-title.png";
+    import { goto } from '$app/navigation';
 
     let radioSelector = 'yes';
     let selected = 'Plain';
@@ -14,6 +15,7 @@
         const formData = new FormData(e.target)
         console.log(formData)
 
+        goto('./thank-you')
         //fetch("/api/sendmail")
     }
 

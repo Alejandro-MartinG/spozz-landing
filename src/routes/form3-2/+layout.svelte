@@ -4,9 +4,14 @@
     import formBg from "$lib/images/form_bg_3.png";
     import title2 from "$lib/images/join-spozz-linear.png";
     import title1 from "$lib/images/join-spozz.png";
-    import line from "$lib/images/small_line.png";
+    import { goto } from '$app/navigation';
 
     $: bgImage = `background-image: url("${formBg}");`;
+
+    let submitted = false;
+    function sendEmail(e) {
+        goto('./thank-you-2')
+    }
 </script>
 
 <svelte:body style="background:#260352"></svelte:body>
@@ -23,24 +28,10 @@
 
         <div>
             <span style="font-weight: bold;">Subscribe to our newsletter and receive regular updates about<br> the SPOZZ.club project by e-mail.<br></span>
-            <form>
-                <label>E-Mail:<input type="email" placeholder="    /enter your email"></label>
-                <a href={null} class="btn-p btn btn-primary">SUBMIT</a>
+            <form  class:submitted on:submit|preventDefault={sendEmail}>
+                <label>E-Mail:<input type="email" placeholder="    /enter your email" required></label>
+                <button type="submitted" class="btn-p btn btn-primary" on:click={() => submitted = true}>SUBMIT</button>
             </form>
-        </div>
-
-        <img class="line" src={line}  alt="SvelteKit"/>
-
-        <div>
-            <span class="center-text" style="font-weight: bold;">
-                THANK YOU!<br>
-                We appreciate your interest in SPOZZ.club very much!<br>
-                Check out our awesome community and become a member today!<br>
-            </span>
-            <div class="btns">
-                <a href='https://discord.gg/6Yp2dcqHQ3' class="btn1 btn btn-primary">JOIN OUR DISCORD</a>
-                <a href={null} class="btn1 btn btn-primary">GET A SPOZZ MEMBERSHIP AVATAR</a>
-            </div>
         </div>
     </div>
 
@@ -67,42 +58,11 @@
         display: inline-flex;
         flex-direction: column;
         align-items:center;
-        margin: 3rem 6rem 3rem 6rem;
+        margin: 3rem 6rem 6rem 6rem;
         align-self: center;
     }
     .title {
         mix-blend-mode: overlay;
-    }
-    .btns {
-        display: flex;
-        align-content: center;
-    }
-    .btn1 {
-        margin: auto;
-        margin-top: 1rem;
-        font-size: 10px;
-        line-height: 132%;
-        letter-spacing: 0.105em;
-        border-radius: 5px;
-        border: 1px solid #FFFFFF;
-        background-color: transparent;
-    }
-    .btn1:hover {
-        margin: auto;
-        margin-top: 1rem;
-        font-size: 10px;
-        line-height: 132%;
-        letter-spacing: 0.105em;
-        border-radius: 5px;
-        border: none;
-        background: linear-gradient(90deg, #713ACA 0%, #4786D6 100%);
-    }
-    .center-text {
-        display: flex;
-        text-align: center;
-        line-height: 17px;
-        font-size: 10pt;
-        font-weight: 500;
     }
     .btn-p {
         margin: auto;
@@ -133,10 +93,5 @@
         width: 370px;
         border: none;
         outline: none;
-    }
-    .line {
-        width: 100%;
-        max-width: 250px;
-        margin: 2rem 2rem .5rem 2rem;
     }
 </style>

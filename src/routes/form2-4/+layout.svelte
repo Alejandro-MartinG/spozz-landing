@@ -4,7 +4,6 @@
     import formBg from "$lib/images/form_bg_2.png";
     import title2 from "$lib/images/join-spozz-linear.png";
     import title1 from "$lib/images/join-spozz.png";
-    import line from "$lib/images/small_line.png";
 
     $: bgImage = `background-image: url("${formBg}");`;
 </script>
@@ -21,21 +20,6 @@
 
     <div class="hbo">
         <slot/>
-
-        <img class="line" src={line}  alt="SvelteKit"/>
-
-        <div>
-            <span class="center-text" style="font-weight: bold;">
-                THANK YOU!<br>
-                We appreciate your interest in SPOZZ.club very much!<br>
-                Check out our awesome community and become a member today!<br>
-            </span>
-            <div class="btns">
-                <a href='https://discord.gg/6Yp2dcqHQ3' class="btn1 btn btn-primary">JOIN OUR DISCORD</a>
-                <a href={null} class="btn1 btn btn-primary">GET A SPOZZ MEMBERSHIP AVATAR</a>
-            </div>
-        </div>
-
     </div>
 
     <Footer></Footer>
@@ -61,41 +45,5 @@
     }
     .title {
         mix-blend-mode: overlay;
-    }
-    .btns {
-        display: flex;
-        align-content: center;
-    }
-    .btn1 {
-        margin: auto;
-        margin-top: 1rem;
-        font-size: 10px;
-        line-height: 132%;
-        letter-spacing: 0.105em;
-        border-radius: 5px;
-        border: 1px solid #FFFFFF;
-        background-color: transparent;
-    }
-    .btn1:hover {
-        margin: auto;
-        margin-top: 1rem;
-        font-size: 10px;
-        line-height: 132%;
-        letter-spacing: 0.105em;
-        border-radius: 5px;
-        border: none;
-        background: linear-gradient(90deg, #713ACA 0%, #4786D6 100%);
-    }
-    .center-text {
-        display: flex;
-        text-align: center;
-        line-height: 17px;
-        font-size: 10pt;
-        font-weight: 500;
-    }
-    .line {
-        width: 100%;
-        max-width: 250px;
-        margin: 1rem 2rem .5rem 2rem;
     }
 </style>
