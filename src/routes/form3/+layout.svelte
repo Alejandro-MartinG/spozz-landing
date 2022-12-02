@@ -58,11 +58,12 @@
         display: inline-flex;
         flex-direction: column;
         align-items:center;
-        margin: 3rem 6rem 7.5rem 6rem;
+        margin: 3rem 6rem 13rem 6rem;
         align-self: center;
     }
     .title {
         mix-blend-mode: overlay;
+        max-width: 36%;
     }
     .btn-p {
         margin: auto;
@@ -72,7 +73,7 @@
         letter-spacing: 0.105em;
         background: linear-gradient(90deg, #713ACA 0%, #4786D6 100%);
         border-radius: 5px;
-        box-shadow: var(--shadow-elevation-medium);
+        box-shadow: var(--shadow-elevation-low);
         border: none;
     }
     label {

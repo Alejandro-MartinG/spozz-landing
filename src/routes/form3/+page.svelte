@@ -5,18 +5,17 @@
 <img class="title" src={title}  alt="SvelteKit"/>
 
 <div class="cardo">
-  <div class="card-header">Music fans : Own a song of your preferred artist:</div>
+  <div class="card-header">Music fans: Own a song of your favourite</div>
   <div class="card-body">
-    You can now buy a song, listen to it, collect it and earn royalties from its reproduction on streaming.<br><br>
-    You can sell it anytime or surprise someone with a gift!
+    On SPOZZ.club you can buy a song, listen to it, collect it and earn royalties from its reproduction on streaming. <br><br>
+    Sell it anytime or surprise a loved one with a gift !
   </div>
 </div>
 
 <div class="cardo">
-  <div class="card-header">Investors, collectors and traders:</div>
+  <div class="card-header">Art lovers and collectors: Buy your favourite artists' newest creations on SPOZZ.club!</div>
   <div class="card-body">
-    Buy your favorite artist’s newest creations on SPOZZ.club!<br><br> 
-    Assess what’s hot and trendy, buy early into new limited releases and build a valuable collection of digital artworks.
+    Assess what’s hot and trendy, buy early into new limited releases and build a valuable collection of digital artwork.
   </div>
 </div>
 
@@ -31,9 +30,9 @@
         height: 100%;
         max-width: 500px;
 
-        background: #FFFFFF;
-        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
-        border-radius: 10px;
+        border: 1px solid #FFFFFFFF;
+        border-radius: 5px;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
         overflow:hidden;
     }
     .card-body {
@@ -46,13 +45,14 @@
         line-height: 17px;
         letter-spacing: -0.05em;
 
+        background: #FFFFFF;
         color: #5658CF;
     }
     .card-header {
         display: block;
         text-align: center;
         color: #fff;
-        background: linear-gradient(90deg, #713ACA 0%, #4786D6 100%);
+        background: transparent;
         font-family: 'Montserrat';
         font-weight: bold;
         letter-spacing: -0.03em;
