@@ -1,8 +1,10 @@
 <script>
     import title from "$lib/images/art-title.png";
+    import title2 from "$lib/images/art-title-2.png";
 </script>
 
 <img class="title" src={title}  alt="SvelteKit"/>
+<img class="title2" src={title2}  alt="SvelteKit"/>
 
 <div class="cardo">
   <div class="card-header">Music fans: Own a song of your favourite</div>
@@ -15,7 +17,7 @@
 <div class="cardo">
   <div class="card-header">Art lovers and collectors: Buy your favourite artists' newest creations on SPOZZ.club!</div>
   <div class="card-body">
-    Assess what’s hot and trendy, buy early into new limited releases and build a valuable collection of digital artwork.
+    Assess what's hot and trendy, buy early into new limited releases and build a valuable collection of digital artwork.
   </div>
 </div>
 
@@ -40,9 +42,9 @@
         flex-direction: column;
         font-family: 'Montserrat';
         font-style: normal;
-        font-weight: 400;
+        font-weight: 550;
         font-size: 14px;
-        line-height: 17px;
+        line-height: 15px;
         letter-spacing: -0.05em;
 
         background: #FFFFFF;
@@ -50,15 +52,20 @@
     }
     .card-header {
         display: block;
-        text-align: center;
+        text-align: left;
         color: #fff;
         background: transparent;
         font-family: 'Montserrat';
-        font-weight: bold;
+        font-weight: 600;
         letter-spacing: -0.03em;
-        font-size: 10pt;
+        font-size: 11pt;
     }
     .title {
+        mix-blend-mode: overlay;
+        align-self: center;
+        margin-bottom: .3rem;
+    }
+    .title2 {
         mix-blend-mode: overlay;
         align-self: center;
         margin-bottom: 3rem;

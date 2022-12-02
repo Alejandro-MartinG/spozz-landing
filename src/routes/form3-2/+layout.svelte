@@ -26,8 +26,8 @@
     <div class="hbo">
         <slot/>
 
-        <div>
-            <span style="font-weight: bold;">Subscribe to our newsletter and receive regular updates about<br> the SPOZZ.club project by e-mail.<br></span>
+        <div class="bot-form">
+            <span style="font-weight: 500; font-size: 13px">Subscribe to our newsletter and receive regular updates about the SPOZZ.club project by e-mail.<br></span>
             <form  class:submitted on:submit|preventDefault={sendEmail}>
                 <label>E-Mail:<input type="email" placeholder="    /enter your email" required></label>
                 <button type="submitted" class="btn-p btn btn-primary" on:click={() => submitted = true}>SUBMIT</button>
@@ -58,11 +58,12 @@
         display: inline-flex;
         flex-direction: column;
         align-items:center;
-        margin: 3rem 6rem 6rem 6rem;
+        margin: 3rem 6rem 12rem 6rem;
         align-self: center;
     }
     .title {
         mix-blend-mode: overlay;
+        max-width: 36%;
     }
     .btn-p {
         margin: auto;
@@ -72,7 +73,7 @@
         letter-spacing: 0.105em;
         background: linear-gradient(90deg, #713ACA 0%, #4786D6 100%);
         border-radius: 5px;
-        box-shadow: var(--shadow-elevation-medium);
+        box-shadow: var(--shadow-elevation-low);
         border: none;
     }
     label {
@@ -93,5 +94,10 @@
         width: 370px;
         border: none;
         outline: none;
+    }
+    .bot-form {
+        display: flex;
+        flex-direction:column;
+        align-items: center;
     }
 </style>
