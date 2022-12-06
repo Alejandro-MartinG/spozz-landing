@@ -1,12 +1,11 @@
 import { sveltekit } from '@sveltejs/kit/vite';
+import ViteFS from 'vite-fs'
 
 const config = {
-	plugins: [sveltekit()],
-	resolve: {
-		alias: {
-			fs: require.resolve('rollup-plugin-node-builtins'),
-		},
-  	}
+	plugins: [
+		sveltekit(),
+		ViteFS()
+	],
 };
 
 export default config;
