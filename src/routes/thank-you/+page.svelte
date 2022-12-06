@@ -13,8 +13,8 @@
     </span>
 
     <div class="btns">
-        <a href='https://discord.gg/6Yp2dcqHQ3' class="btn1 btn btn-primary">JOIN OUR DISCORD</a>
-        <a href={null} class="btn1 btn btn-primary">GET A SPOZZ MEMBERSHIP AVATAR</a>
+        <button href='https://discord.gg/6Yp2dcqHQ3' class="btn1 btn btn-primary">JOIN OUR DISCORD</button>
+        <button disabled href={null} class="btn1 btn btn-primary deactivated">GET A SPOZZ MEMBERSHIP AVATAR</button>
     </div>
   </div>
 </div>

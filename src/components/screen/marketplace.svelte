@@ -23,11 +23,11 @@
 
     const links = {
         a: null,
-        b: null,
-        c: null,
-        d: "https://discord.com/invite/6Yp2dcqHQ3",
+        b: "https://blog.spozz.club",
+        c: "https://tokenizzer.spozz.club",
+        d: "https://discord.gg/tGWVtRS9Vp",
         e: null,
-        f: null,
+        f: "https://info.spozz.club",
     }
 
     export let value = 'a';

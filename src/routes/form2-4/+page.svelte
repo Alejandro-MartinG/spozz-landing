@@ -1,24 +1,10 @@
 <script>
     import headTitle from "$lib/images/photo-title.png";
-    import { goto } from '$app/navigation';
 
     let radioSelector = 'yes';
-    let selected = 'Plain';
-    let submitted = false;
 
-
-    // /** @type {import('./$types').PageData} */
-    // export let get;
-
-    function sendEmail(e) {
-        console.log(e.target)
-        const formData = new FormData(e.target)
-        console.log(formData)
-
-        goto('./thank-you')
-        //fetch("/api/sendmail")
-    }
-
+    /** @type {import('./$types').ActionData} */
+    export let form;
 </script>
 
 <img class="title" src={headTitle}  alt="SvelteKit"/>
@@ -38,8 +24,8 @@
   <div class="card-header">Pre-register now to be among the first on the SPOZZ.club platform on launch day.</div>
 
   <div class="card-body">
-    <form class="content" class:submitted on:submit|preventDefault={sendEmail}>
-        <label>Artist / Band Name<br>
+    <form class="content" method="POST" action="?/register">
+        <label>Artist / Photographer Name<br>
             <input id="name" name="name" type="text"  placeholder="    / enter information" autocomplete required/>
         </label>
         <label>Contact Person First Name<br>
@@ -318,23 +304,23 @@
                 <option value="ZW">Zimbabwe</option>
             </select>
         </label>
-        <label>Spotify<br>
-            <input type="text" placeholder="    / enter information"/>
+        <label>Facebook<br>
+            <input id="facebook" name="facebook" type="url" placeholder="    https://www.facebook.com/SPOZZ.club"/>
         </label>
-        <label>Youtube<br>
-            <input type="text" placeholder="    / enter information"/>
+        <label>Other Social Media<br>
+            <input id="otherSocialMedia" name="otherSocialMedia" type="url" placeholder="    https://url.com"/>
         </label>
         <label>Instagram<br>
-            <input type="text" placeholder="    / enter information"/>
+            <input id="instagram" name="instagram" type="url" placeholder="    https://www.instagram.com/spozz.club.nft"/>
         </label>
         <label>Twitter<br>
-            <input type="url" placeholder="    / enter information"/>
+            <input id="twitter" name="twitter" type="url" placeholder="    https://twitter.com/spozzclubnft"/>
         </label>
         <label>Website<br>
-            <input type="url" placeholder="    / enter information"/>
+            <input id="twitter" name="twitter" type="url" placeholder="    https://url.com"/>
         </label>
         <label>Comments<br>
-            <input class="comment" type="text" placeholder=""/>
+            <input id="comments" name="comments" class="comment" type="text" placeholder=""/>
         </label>
 
         <div class="bottom-text">
@@ -347,16 +333,16 @@
 
             <div class="radio-buttons">
                 <label>
-                    <input type="radio" bind:group={radioSelector} value="yes">Yes 
+                    <input type="radio" name="sendmail" bind:group={radioSelector} value="yes">Yes 
                 </label>
 
                 <label>
-                    <input type="radio" bind:group={radioSelector} value="no">No 
+                    <input type="radio" name="sendmail" bind:group={radioSelector} value="no">No 
                 </label>
             </div>
         </div>
 
-        <button type="submit" class="btn btn-primary" on:click={() => submitted = true}>SUBMIT</button>
+        <button type="submit" class="btn btn-primary">SUBMIT</button>
     </form>
   </div>
 </div>

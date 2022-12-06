@@ -1,21 +1,10 @@
 <script>
     import headTitle from "$lib/images/music-title.png";
-    import { goto } from '$app/navigation';
 
     let radioSelector = 'yes';
-    let selected = 'Plain';
-    let submitted = false;
 
-
-    function sendEmail(e) {
-        console.log(e.target)
-        const formData = new FormData(e.target)
-        console.log(formData)
-
-        goto('./thank-you')
-        //fetch("/api/sendmail")
-    }
-
+    /** @type {import('./$types').ActionData} */
+    export let form;
 </script>
 
 <img class="title" src={headTitle}  alt="SvelteKit"/>
@@ -43,7 +32,7 @@
   <div class="card-header">Pre-register now to be among the first on the SPOZZ.club platform on launch day.</div>
 
   <div class="card-body">
-    <form class="content" class:submitted on:submit|preventDefault={sendEmail}>
+    <form class="content" method="POST" action="?/register">
         <label>Artist / Band Name<br>
             <input id="name" name="name" type="text"  placeholder="    / enter information" autocomplete required/>
         </label>
@@ -324,22 +313,22 @@
             </select>
         </label>
         <label>Spotify<br>
-            <input type="text" placeholder="    / enter information"/>
+            <input id="spotify" name="spotify" type="text" placeholder="    https://spotify.com/spozz.club"/>
         </label>
         <label>Youtube<br>
-            <input type="text" placeholder="    / enter information"/>
+            <input id="youtube" name="youtube" type="text" placeholder="    https://www.youtube.com/@SPOZZclub"/>
         </label>
         <label>Instagram<br>
-            <input type="text" placeholder="    / enter information"/>
+            <input id="instagram" name="instagram"type="text" placeholder="    https://www.instagram.com/spozz.club.nft"/>
         </label>
         <label>Twitter<br>
-            <input type="url" placeholder="    / enter information"/>
+            <input id="twitter" name="twitter" type="url" placeholder="    https://twitter.com/spozzclubnft"/>
         </label>
         <label>Website<br>
-            <input type="url" placeholder="    / enter information"/>
+            <input id="website" name="website" type="url" placeholder="    https://url.com"/>
         </label>
         <label>Comments<br>
-            <input class="comment" type="text"/>
+            <input id="comments" name="comments" class="comment" type="text"/>
         </label>
 
         <div class="bottom-text">
@@ -347,21 +336,19 @@
             <span style="font-weight: bold;">We will contact you shortly!<br></span>
         </div>
 
-        <div class="card-radio">
-            <span class="blue-text">Do you want to receive news by e-mail and subscribe to our newsletter?<br></span>
+        <span class="blue-text">Do you want to receive news by e-mail and subscribe to our newsletter?<br></span>
 
-            <div class="radio-buttons">
-                <label>
-                    <input type="radio" bind:group={radioSelector} value="yes">Yes 
-                </label>
+        <div class="radio-buttons">
+            <label>
+                <input type="radio" name="sendmail" bind:group={radioSelector} value="yes">Yes 
+            </label>
 
-                <label>
-                    <input type="radio" bind:group={radioSelector} value="no">No 
-                </label>
-            </div>
+            <label>
+                <input type="radio" name="sendmail" bind:group={radioSelector} value="no">No 
+            </label>
         </div>
 
-        <button type="submit" class="btn btn-primary" on:click={() => submitted = true}>SUBMIT</button>
+        <button class="btn btn-primary">SUBMIT</button>
     </form>
   </div>
 </div>
@@ -428,12 +415,6 @@
         background: linear-gradient(90deg, #713ACA 0%, #4786D6 100%);
     }
 
-    .card-radio {
-        margin: auto;
-        margin-bottom: .9rem;
-        display: flex;
-        flex-direction: column;
-    }
     .btn {
         margin: auto;
         width: 107px;

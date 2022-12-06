@@ -24,8 +24,9 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"svelte-fluid-layout": "^0.2.0",
-		"svelte-grid-responsive": "^1.2.4",
+		"csv": "^6.2.3",
+		"fs": "^0.0.1-security",
+		"sqlite3": "^5.1.2",
 		"sveltestrap": "^5.9.0"
 	}
 }

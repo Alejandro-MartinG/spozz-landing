@@ -91,7 +91,7 @@
 
 <style>
     .selected {
-        opacity: .4;
+        opacity: 0;
     }
     .cardo {
         position: relative;
