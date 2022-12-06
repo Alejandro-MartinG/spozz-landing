@@ -1,3 +1,4 @@
+/*
 import { stringify } from 'csv';
 import fs from 'fs';
 
@@ -24,3 +25,4 @@ export const saveRowsInCSV = (row) => {
 
     console.log('New row added to csv');
 }
+*/
