@@ -26,6 +26,7 @@
 	"dependencies": {
 		"csv": "^6.2.3",
 		"fs": "^0.0.1-security",
+		"rollup-plugin-node-builtins": "^2.1.2",
 		"sqlite3": "^5.1.2",
 		"sveltestrap": "^5.9.0"
 	}
