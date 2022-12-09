@@ -1,12 +1,9 @@
-/*
 import { stringify } from 'csv';
-import fs from 'fs';
-*/
+import fs from 'node:fs';
 
 const fileName = 'saved_forms.csv'
 
 export const saveRowsInCSV = (row) => {
-/*
     const writableStream = fs.createWriteStream(fileName, { flags: 'a' });
     const stringifyParams = !fs.existsSync(fileName) ? { header: true } : { header: false };
     const stringifier = stringify(stringifyParams);
@@ -24,9 +21,5 @@ export const saveRowsInCSV = (row) => {
     stringifier.end();
     writableStream.end();
 
-*/
-
-    console.log(fileName);
-    console.log(row);
     console.log('New row added to csv');
 }
